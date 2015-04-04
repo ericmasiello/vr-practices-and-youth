@@ -36,6 +36,10 @@
     
     <header id="k-head" class="container  site-header"><!-- container + head wrapper -->
 
+        <?php if( !function_exists( 'dynamic_sidebar' ) || !dynamic_sidebar( __( 'Header Widget', 'kazaz' ) ) ) : ?>
+        <!-- sidebar widgets -->
+        <?php endif; ?>
+
         <div class="row  col-padded">
             <h1 class="site-title  col-xs-12  col-sm-4">
                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">

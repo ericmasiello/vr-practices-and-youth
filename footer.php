@@ -90,8 +90,10 @@
     </footer><!-- subfooter end -->
     
 	<?php wp_footer(); ?>
-    
+
+    <!-- Begin Analytics -->
     <?php k_google_analytics(); ?>
+    <!-- End Analytics -->
     
   </body>
   
