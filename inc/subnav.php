@@ -1,12 +1,22 @@
 <?php
 // Set up the objects needed
+$args = array(
+	'posts_per_page' => -1,
+	'post_type' => 'page'
+);
+
 $my_wp_query = new WP_Query();
-$all_wp_pages = $my_wp_query->query(array('post_type' => 'page'));
+$all_wp_pages = $my_wp_query->query($args);
+
+//echo '<pre>Total pages ' . print_r( count($all_wp_pages), true ) . '</pre>';
+//echo '<pre>Total pages ' . print_r( $all_wp_pages, true ) . '</pre>';
 
 // Grab all child pages of the current page
 $page_children = get_page_children( $post->ID, $all_wp_pages );
 
-//echo '<pre>' . print_r( count($page_children), true ) . '</pre>';
+//echo '<pre>ID ' . $post->ID . '</pre>';
+
+//echo '<pre>Children ' . print_r( count($page_children), true ) . '</pre>';
 
 //echo '<pre>' . print_r( $post->post_parent, true ) . '</pre>';
 

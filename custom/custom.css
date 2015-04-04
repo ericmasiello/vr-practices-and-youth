@@ -42,7 +42,7 @@ ul, ol {
 
 .site-title > a[rel="home"] {
 
-	background: url('../public/img/MDPromise.svg') no-repeat 0 center transparent;
+	background: url('../public/img/vrandyouth.svg') no-repeat 0 center transparent;
 	background-size: contain;
 	display: block;
 	text-indent: -9999px;
@@ -64,7 +64,7 @@ ul, ol {
 	.site-title > a[rel="home"] {
 
 		height: 60px;
-		width: 250px;
+		width: 225px;
 	}
 }
 
@@ -73,7 +73,7 @@ ul, ol {
 	.site-title > a[rel="home"] {
 
 		height: 76px;
-		width: 300px;
+		width: 285px;
 	}
 }
 

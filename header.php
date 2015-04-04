@@ -13,7 +13,7 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title><?php wp_title( '|', true, 'right' ); ?></title>
-	<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic,600italic' rel='stylesheet' type='text/css'>
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
     <link rel="shortcut icon" href="<?php echo vp_option( 'vpt_option.site_logo_favicon' ); ?>">
@@ -35,6 +35,10 @@
     </div>
     
     <header id="k-head" class="container  site-header"><!-- container + head wrapper -->
+
+        <?php if( !function_exists( 'dynamic_sidebar' ) || !dynamic_sidebar( __( 'Header Widget', 'kazaz' ) ) ) : ?>
+        <!-- sidebar widgets -->
+        <?php endif; ?>
 
         <div class="row  col-padded">
             <h1 class="site-title  col-xs-12  col-sm-4">
