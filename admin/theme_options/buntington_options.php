@@ -1,7 +1,7 @@
 <?php
 return array(
 	'title' => __( 'VR Practices and Youth Options', 'kazaz' ),
-	'logo' => get_template_directory_uri() . '/public/img/options_panel_icon.png',
+	'logo' => get_template_directory_uri() . '/public/img/vrandyouth.svg',
 	'menus' => array(
 		/* basic options end */
 		/* Social media starts */
