@@ -36,22 +36,32 @@ get_header();
 					<?php the_content(); ?>
 				</div>
 
-				<div>
-					<?php if(get_field('research')){ //if the field is not empty
-                        echo get_field('research'); //display it
-                    } ?>
-				</div>
+				<div class="row  equal-height">
 
-				<div>
-				<?php if(get_field('resources')){ //if the field is not empty
-					echo get_field('resources'); //display it
-				} ?>
-				</div>
+					<div class="col-md-4  prm-md">
+						<div class="well">
+							<?php if(get_field('research')){ //if the field is not empty
+								echo get_field('research'); //display it
+							} ?>
+						</div>
+					</div>
 
-				<div>
-				<?php if(get_field('training_&_ta')){ //if the field is not empty
-					echo get_field('training_&_ta'); //display it
-				} ?>
+					<div class="col-md-4  phm-md">
+						<div class="well">
+							<?php if(get_field('resources')){ //if the field is not empty
+								echo get_field('resources'); //display it
+							} ?>
+						</div>
+					</div>
+
+					<div class="col-md-4  phm-md">
+						<div class="well">
+							<?php if(get_field('training_&_ta')){ //if the field is not empty
+								echo get_field('training_&_ta'); //display it
+							} ?>
+						</div>
+					</div>
+
 				</div>
 
 				<?php

@@ -53,6 +53,16 @@
 	margin-left: -0.5rem;
 }
 
+/*
+ * Makes content boxes all equal height
+ */
+.row.equal-height > [class*="col-"] {
+
+	-webkit-flex-direction: initial;
+	-ms-flex-direction: initial;
+	flex-direction: initial;
+}
+
 .flexbox .row:before {
 
 	display: none;

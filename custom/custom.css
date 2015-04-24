@@ -163,7 +163,7 @@ ul, ol {
 	font-weight: normal;
 }
 
-.form-control {
+.form-control, .btn {
 
 	font-size: 16px;
 	font-size: 1rem;
@@ -226,4 +226,107 @@ ul, ol {
 		right: 20px;
 		right: 1.25rem;
 	}
+}
+
+@media only screen and (min-width: 48em) {
+
+	.plm-sm {
+
+		padding-left: 16px !important;
+		padding-left: 1rem !important;
+	}
+
+	.prm-sm {
+
+		padding-right: 16px !important;
+		padding-right: 1rem !important;
+	}
+
+	.phm-sm {
+
+		padding-left: 16px !important;
+		padding-left: 1rem !important;
+		padding-right: 16px !important;
+		padding-right: 1rem !important;
+	}
+}
+
+@media only screen and (min-width: 62em) {
+
+	.plm-md {
+
+		padding-left: 16px !important;
+		padding-left: 1rem !important;
+	}
+
+	.prm-md {
+
+		padding-right: 16px !important;
+		padding-right: 1rem !important;
+	}
+
+	.phm-md {
+
+		padding-left: 16px !important;
+		padding-left: 1rem !important;
+		padding-right: 16px !important;
+		padding-right: 1rem !important;
+	}
+}
+
+.well :first-child {
+
+	margin-top: 4px;
+	margin-top: .25rem;
+}
+
+/*ul*/.header-widgets,
+/*ul*/.footer-widgets {
+
+	list-style-type: none;
+}
+
+.header-widgets > li,
+.footer-widgets > li{
+
+	display: inline-block;
+}
+
+/*ul*/.header-widgets {
+
+
+	text-align: right;
+}
+
+.header-widgets .input-group {
+
+	max-width: 20rem;
+}
+
+.footer-widgets {
+
+	text-align: center;
+}
+
+.footer-widgets > li {
+
+	width: 50%;
+	min-width: 300px;
+	min-width: 18.75rem;
+	max-width: 50rem;
+}
+
+/* Constant contact widget */
+
+.widget_sf_widget_constantcontact .title-widget {
+
+	font-size: 1em;
+	margin-top: 0;
+	margin-bottom: .5rem;
+}
+
+/* Search Widget */
+.widget_search form {
+
+	display: inline-block;
 }
