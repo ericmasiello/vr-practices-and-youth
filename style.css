@@ -891,6 +891,12 @@ audio { display: none; }
 	margin: 0.3125rem 0 0;
 }
 
+.btn {
+
+	padding: 7px 12px;
+	padding: 0.4375rem .75rem;
+}
+
 .form-control {
 	-moz-border-radius: 0;
 	-webkit-border-radius: 0;
