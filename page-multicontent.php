@@ -28,7 +28,12 @@ get_header();
 
 				<?php } ?>
 
-				<h1 class="page-title"><?php the_title(); ?></h1>
+				<?php if( get_field('display_page_title') == true ) { ?>
+					<h1 class="page-title"><?php the_title(); ?></h1>
+				<?php } else { ?>
+					<h1 class="page-title  sr-only"><?php the_title(); ?></h1>
+				<?php } ?>
+
 				<?php include("inc/subnav.php"); ?>
 
 
@@ -36,22 +41,32 @@ get_header();
 					<?php the_content(); ?>
 				</div>
 
-				<div>
-					<?php if(get_field('research')){ //if the field is not empty
-                        echo get_field('research'); //display it
-                    } ?>
-				</div>
+				<div class="row  equal-height">
 
-				<div>
-				<?php if(get_field('resources')){ //if the field is not empty
-					echo get_field('resources'); //display it
-				} ?>
-				</div>
+					<div class="col-md-4  prm-md">
+						<div class="well">
+							<?php if(get_field('research')){ //if the field is not empty
+								echo get_field('research'); //display it
+							} ?>
+						</div>
+					</div>
 
-				<div>
-				<?php if(get_field('training_&_ta')){ //if the field is not empty
-					echo get_field('training_&_ta'); //display it
-				} ?>
+					<div class="col-md-4  phm-md">
+						<div class="well">
+							<?php if(get_field('resources')){ //if the field is not empty
+								echo get_field('resources'); //display it
+							} ?>
+						</div>
+					</div>
+
+					<div class="col-md-4  phm-md">
+						<div class="well">
+							<?php if(get_field('training_&_ta')){ //if the field is not empty
+								echo get_field('training_&_ta'); //display it
+							} ?>
+						</div>
+					</div>
+
 				</div>
 
 				<?php

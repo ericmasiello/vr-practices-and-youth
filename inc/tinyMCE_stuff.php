@@ -43,6 +43,11 @@ function k_mce_before_init( $settings ) {
     		'selector' => 'h1,h2,h3,h4,h5,h6',
     		'classes' => 'title-giant'
     	),
+    	array(
+			'title' => __( 'Lead', 'kazaz' ),
+			'selector' => 'p',
+			'classes' => 'lead'
+		),
 		// titles end
 		// lists start
     	array(
