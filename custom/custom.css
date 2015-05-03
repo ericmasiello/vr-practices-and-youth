@@ -369,3 +369,57 @@ p {
 
 	margin-top: 3rem;
 }
+
+/*
+ * Calendar
+ */
+
+table.fullcalendar {
+
+	border: 1px solid #CCC;
+	width: auto;
+}
+
+.fullcalendar tbody td {
+
+	width: 8rem;
+	height: 8rem;
+}
+
+table.em-calendar thead {
+
+	font-size: 24px;
+	font-size: 1.5rem;
+}
+
+.em-calnav {
+
+	display: inline-block;
+	text-indent: -9999px;
+}
+
+.em-calnav-next {
+
+	float: right;
+}
+
+.em-calnav-prev::before,
+.em-calnav-next::after {
+
+	display: inline-block;
+	font-family: "FontAwesome";
+	text-indent: 9999px;
+	width: 2rem;
+	height: 2rem;
+	background-color: red;
+}
+
+.em-calnav-prev::before {
+
+	content: "\f137";
+}
+
+.em-calnav-next::after {
+
+	content: "\f138";
+}
