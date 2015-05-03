@@ -375,13 +375,17 @@ p {
  */
 
 table.fullcalendar {
-
-	border: 1px solid #CCC;
 	width: auto;
 }
 
-.fullcalendar tbody td {
+table.fullcalendar thead td {
 
+	border: none;
+}
+
+table.fullcalendar tbody td {
+
+	border: 1px solid #CCC;
 	width: 8rem;
 	height: 8rem;
 }
@@ -392,10 +396,17 @@ table.em-calendar thead {
 	font-size: 1.5rem;
 }
 
+table.fullcalendar .month_name {
+
+	text-align: center;
+}
+
 .em-calnav {
 
 	display: inline-block;
-	text-indent: -9999px;
+	font-size: 0; /* hides the '<<' & '>>' text inserted by the plugin */
+	margin: 0 12px;
+	margin: 0 .75rem;
 }
 
 .em-calnav-next {
@@ -408,10 +419,8 @@ table.em-calendar thead {
 
 	display: inline-block;
 	font-family: "FontAwesome";
-	text-indent: 9999px;
-	width: 2rem;
-	height: 2rem;
-	background-color: red;
+	font-size: 24px;
+	font-size: 1.5rem;
 }
 
 .em-calnav-prev::before {
