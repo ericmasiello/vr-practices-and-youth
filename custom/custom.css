@@ -9,6 +9,12 @@ ul, ol {
 	padding-left: 1rem;
 }
 
+p {
+
+	margin-bottom: 15px;
+	margin-bottom: .75rem;
+}
+
 .site-header, .site-footer {
 
 	padding-top: 30px;
@@ -38,6 +44,7 @@ ul, ol {
 
 	display: inline-block;
 	margin: 0;
+	padding-left: 0;
 }
 
 .site-title > a[rel="home"] {
@@ -341,4 +348,24 @@ ul, ol {
 	position: absolute;
 	right: -15px;
 	right: -.75rem;
+}
+
+
+/*
+ * news body rules
+ */
+
+.news-body > h1:first-child,
+.news-body > h2:first-child,
+.news-body > h3:first-child,
+.news-body > h4:first-child,
+.news-body > h5:first-child,
+.news-body > h6:first-child {
+
+	margin-top: 0;
+}
+
+.news-body .row + .row{
+
+	margin-top: 3rem;
 }

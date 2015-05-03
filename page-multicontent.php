@@ -28,7 +28,12 @@ get_header();
 
 				<?php } ?>
 
-				<h1 class="page-title"><?php the_title(); ?></h1>
+				<?php if( get_field('display_page_title') == true ) { ?>
+					<h1 class="page-title"><?php the_title(); ?></h1>
+				<?php } else { ?>
+					<h1 class="page-title  sr-only"><?php the_title(); ?></h1>
+				<?php } ?>
+
 				<?php include("inc/subnav.php"); ?>
 
 
