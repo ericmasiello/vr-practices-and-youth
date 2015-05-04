@@ -365,6 +365,11 @@ p {
 	margin-top: 0;
 }
 
+.news-body > div {
+
+	max-width: 100%;
+}
+
 .news-body .row + .row{
 
 	margin-top: 3rem;
@@ -373,6 +378,21 @@ p {
 /*
  * Calendar
  */
+
+table.em-calendar td.eventful a,
+table.em-calendar td.eventful-today a {
+
+	color: #337AB7;
+}
+
+table.em-calendar td.eventful a:hover,
+table.em-calendar td.eventful-today a:hover,
+table.em-calendar td.eventful a:focus,
+table.em-calendar td.eventful-today a:focus {
+
+	color: #23527C;
+}
+
 
 table.fullcalendar {
 	width: auto;
@@ -383,11 +403,27 @@ table.fullcalendar thead td {
 	border: none;
 }
 
+table.fullcalendar tbody {
+
+	font-size: .875rem;
+}
+
 table.fullcalendar tbody td {
 
 	border: 1px solid #CCC;
 	width: 8rem;
 	height: 8rem;
+}
+
+table.fullcalendar td ul {
+
+	list-style-type: none;
+	padding-left: 0;
+}
+
+table.fullcalendar .days-names td {
+
+	height: auto;
 }
 
 table.em-calendar thead {
@@ -431,4 +467,121 @@ table.fullcalendar .month_name {
 .em-calnav-next::after {
 
 	content: "\f138";
+}
+
+@media only screen and (max-width: 40em) {
+
+	table.fullcalendar,
+	table.fullcalendar tbody,
+	table.fullcalendar thead,
+	table.fullcalendar tr,
+	table.fullcalendar tbody td,
+	table.fullcalendar tbody th{
+
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+
+	table.fullcalendar tbody {
+
+		font-size: 1rem;
+	}
+
+	table.fullcalendar thead tr {
+
+		overflow: hidden;
+	}
+
+	table.fullcalendar thead td {
+
+		display: inline-block;
+		width: auto;
+	}
+
+	table.fullcalendar tbody td {
+
+		border-top: 0;
+	}
+
+	table.fullcalendar thead {
+
+		border-bottom: 1px solid #ccc;
+	}
+
+	table.fullcalendar thead .month_name {
+
+		text-align: left;
+	}
+
+	table.fullcalendar .days-names,
+	table.fullcalendar .eventless-pre,
+	table.fullcalendar .eventful-pre,
+	table.fullcalendar .eventless-post,
+	table.fullcalendar .eventful-post {
+
+		display: none;
+	}
+
+	.em-calnav-prev {
+
+		margin-left: 0;
+	}
+
+	.em-calnav-next {
+
+		margin-right: 0;
+	}
+}
+
+/*
+ * Custom styles for Slider
+ */
+
+.carousel-text {
+
+	display: none;
+	overflow: hidden;
+	font-size: 20px;
+	font-size: 1.25rem;
+}
+
+.carousel-text::after {
+
+	content: "";
+	text-align: right;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 64px;
+	height: 4rem;
+	background: linear-gradient(to bottom, transparent 0%,#ffffff 100%); /* W3C */
+}
+
+@media only screen and (min-width: 48em) {
+
+	.carousel-text {
+
+		display: block;
+	}
+}
+
+/*
+ * Skip Nav
+ */
+
+#skip-navigation {
+	padding: 1em;
+	position: absolute;
+	top: -20em;
+	left: 1em;
+	z-index: 1000;
+	transition: top .3s ease-in-out;
+}
+
+#skip-navigation:focus {
+	position: absolute;
+	top: 20px;
+	background: #FFF;
 }
