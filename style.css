@@ -44,7 +44,6 @@ body {
 	word-wrap: break-word;
 }
 a { -webkit-transition: 0.2s ease-in-out all; -moz-transition: 0.2s ease-in-out all; -o-transition: 0.2s ease-in-out all; transition: 0.2s ease-in-out all; }
-a:hover, a:focus { color: #111; outline: none; }
 /* == END font and links == */
 
 /* == blockquotes == */
@@ -336,8 +335,8 @@ span.alter-menu-icon { display: block; width: 24px; height: 24px; background: ur
 
 	border-bottom: 1px solid #eee;
 	display: block;
-	padding: 11px 16px;
-	padding: .666666666667rem 1rem;
+	padding: 11px 16px 11px;
+	padding: .666666666667rem 3rem .666666666667rem 1rem;
 	position: relative;
 	text-decoration: none;
 }
@@ -347,9 +346,13 @@ span.alter-menu-icon { display: block; width: 24px; height: 24px; background: ur
 	content: "\e258";
 	color: #ccc;
 	font-family: 'Glyphicons Halflings';
+	font-size: 16px;
+	font-size: 1rem;
 	position: absolute;
 	right: 16px;
 	right: 1rem;
+	top: 12px;
+	top: .75rem;
 }
 
 #navigation-mobile a:hover,

@@ -23,6 +23,8 @@
 
 <body <?php body_class(); ?>>
 
+    <a id="skip-navigation" href="#k-body">Skip Navigation</a>
+
     <!-- device test, don't remove. javascript needed! -->
     <span class="visible-xs"></span><span class="visible-sm"></span><span class="visible-md"></span><span class="visible-lg"></span>
     <!-- device test end -->
