@@ -36,7 +36,7 @@
         ?>
     </div>
     
-    <header id="k-head" class="container  site-header"><!-- container + head wrapper -->
+    <header id="k-head" class="container  site-header" role="banner"><!-- container + head wrapper -->
 
 
         <ul class="header-widgets  col-padded">
@@ -52,7 +52,12 @@
                 </a>
                 <small class="site-title-tagline sr-only"><?php bloginfo( 'description' ); ?></small>
 
-                <a id="mobile-nav-switch" href="#drop-down-left"><span class="alter-menu-icon"></span></a><!-- alternative menu button -->
+
+                <a id="mobile-nav-switch" href="#navigation-mobile" title="Navigation menu"
+                        aria-label="Navigation menu" role="button" aria-controls="navigation-mobile" aria-expanded="false">
+                        <span class="alter-menu-icon">Menu</span>
+                    </a><!-- alternative menu button -->
+
             </h1>
             <div class="col-xs-12 col-sm-8 end-sm">
                 <?php
@@ -66,7 +71,7 @@
     
     </header><!-- container + head wrapper end -->
     
-    <div id="k-body"><!-- content wrapper -->
+    <div id="k-body" role="main"><!-- content wrapper -->
     
     	<div class="container"><!-- container -->
         

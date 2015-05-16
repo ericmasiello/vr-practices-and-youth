@@ -380,7 +380,9 @@ p {
  */
 
 table.em-calendar td.eventful a,
-table.em-calendar td.eventful-today a {
+table.em-calendar td.eventful-today a,
+table.em-calendar td.eventful-pre a,
+table.em-calendar td.eventful-post a{
 
 	color: #337AB7;
 }
@@ -388,9 +390,17 @@ table.em-calendar td.eventful-today a {
 table.em-calendar td.eventful a:hover,
 table.em-calendar td.eventful-today a:hover,
 table.em-calendar td.eventful a:focus,
-table.em-calendar td.eventful-today a:focus {
+table.em-calendar td.eventful-today a:focus,
+table.em-calendar td.eventful-pre a:focus,
+table.em-calendar td.eventful-post a:focus {
 
 	color: #23527C;
+}
+
+table.em-calendar td.eventless-today,
+table.em-calendar td.eventful-today {
+
+	background-color: #cce7ff;
 }
 
 
@@ -467,6 +477,37 @@ table.fullcalendar .month_name {
 .em-calnav-next::after {
 
 	content: "\f138";
+}
+
+table.em-calendar td.eventless-pre,
+.em-calendar td.eventless-post,
+table.em-calendar td.eventful-pre,
+.em-calendar td.eventful-post
+{
+
+	color: #353535;
+	background-color: #fdfdfd;
+	border-color: #eee;
+}
+
+.em-calendar tr:nth-child(2) .eventless-pre,
+.em-calendar tr:nth-child(2) .eventful-pre,
+.em-calendar tr:last-child .eventless-post,
+.em-calendar tr:last-child .eventful-post{
+
+	border-bottom-color: #ccc;
+}
+
+.em-calendar tr:nth-child(2) .eventless-pre:nth-child(1),
+.em-calendar tr:nth-child(2) .eventful-pre:nth-child(1) {
+
+	border-left-color: #ccc;
+}
+
+.em-calendar tr:last-child .eventless-post:last-child,
+.em-calendar tr:last-child .eventful-post:last-child {
+
+	border-right-color: #ccc;
 }
 
 @media only screen and (max-width: 40em) {
@@ -584,4 +625,17 @@ table.fullcalendar .month_name {
 	position: absolute;
 	top: 20px;
 	background: #FFF;
+}
+
+/*
+ * Hide text
+ */
+
+.a11y-text-hide {
+	position: absolute;
+	left: -10000px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
 }
