@@ -18,12 +18,23 @@ p {
 .site-header, .site-footer {
 
 	padding-top: 30px;
-	padding-bottom: 30px;
+	padding-top: 1.875rem;
+}
+
+.site-header {
+
+	border-bottom: 1px solid #ececec;
+	margin-bottom: 30px;
+	margin-bottom: 1.875rem;
+	padding-bottom: 20px;
+	padding-bottom: 1.25rem;
 }
 
 .site-footer {
 
-	border-top: 1px solid #C6C6C5;
+	padding-bottom: 30px;
+	padding-bottom: 1.875rem;
+	border-top: 1px solid #ececec;
 	color: #555;
 	font-size: 14px;
 	font-size: .875rem;
@@ -36,7 +47,21 @@ p {
 	.site-header, .site-footer {
 
 		padding-top: 50px;
+		padding-top: 2.5rem;
+	}
+
+	.site-footer {
+
 		padding-bottom: 50px;
+		padding-bottom: 2.5rem;
+	}
+
+	.site-header {
+
+		padding-bottom: 40px;
+		padding-bottom: 2rem;
+		margin-bottom: 50px;
+		margin-bottom: 2.5rem;
 	}
 }
 

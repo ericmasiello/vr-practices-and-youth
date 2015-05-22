@@ -8,7 +8,7 @@
     
     </div><!-- content wrapper end -->
     
-    <footer id="k-subfooter" class="site-footer  text-center"><!-- subfooter -->
+    <footer id="k-subfooter" class="site-footer  text-center  container"><!-- subfooter -->
 
         <ul class="footer-widgets">
             <?php if( !function_exists( 'dynamic_sidebar' ) || !dynamic_sidebar( __( 'Footer Widget', 'kazaz' ) ) ) : ?>

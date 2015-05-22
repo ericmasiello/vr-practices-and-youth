@@ -388,23 +388,6 @@ return array(
 						),
 					),
 				),
-				/* error page image ends */
-				/* copyright info starts */
-				array(
-					'type' => 'section',
-					'title' => __('Copyright text', 'kazaz'),
-					'name' => 'copyright_text',
-					'description' => __('Enter copyright information here!', 'kazaz'),
-					'fields' => array(
-						array(
-							'type' => 'textarea',
-							'name' => 'theme_copyright',
-							'label' => __('Footer message', 'kazaz'),
-							'description' => __('Your message will show up in theme\'s post-footer.', 'kazaz'),
-							'default' => '',
-						),
-					),
-				),
 				/* copyright info ends */
 			),
 		),
@@ -469,80 +452,7 @@ return array(
 			),
 		),
 		/* Code ends */
-		/* API Keys start */
-		array(
-			'title' => __('API Keys', 'kazaz'),
-			'name' => 'api_keys',
-			'icon' => 'font-awesome:fa fa-key',
-			'controls' => array(
-				array(
-					'type' => 'notebox',
-					'name' => 'nb_keys',
-					'label' => __('How to obtain API Keys?', 'kazaz'),
-					'description' => __('Flickr API Key can be obtained here http://www.flickr.com/services/api/misc.api_keys.html and for the Twitter API Key you should register your application here https://dev.twitter.com/apps/new', 'kazaz'),
-					'status' => 'info',
-				),
-				/* Flickr key starts */
-				array(
-					'type' => 'section',
-					'title' => __('Flickr API key', 'kazaz'),
-					'name' => 'flickr_auth',
-					'fields' => array(
-						array(
-							'type' => 'textbox',
-							'name' => 'flickr_key',
-							'label' => __('Enter your Flickr API key', 'kazaz'),
-							'description' => __('It will be needed for Flickr Widget!', 'kazaz'),
-							'default' => '',
-						),
-						/*
-						array(
-							'type' => 'textbox',
-							'name' => 'flickr_secret_code',
-							'label' => __('Enter your Flickr API secret code', 'kazaz'),
-							'description' => __('It will be needed for Flickr Widget!', 'kazaz'),
-							'default' => '',
-						),
-						*/
-					),
-				),
-				/* Flickr key ends */
-				/* Twitter key starts */
-				array(
-					'type' => 'section',
-					'title' => __('Twitter OAuth and Access Token', 'kazaz'),
-					'name' => 'twitter_auth',
-					'fields' => array(
-						array(
-							'type' => 'textbox',
-							'name' => 'twitter_consumer_key',
-							'label' => __( 'Enter your Twitter Consumer key', 'kazaz' ),
-							'description' => __('It will be needed for OAuth settings!', 'kazaz'),
-						),
-						array(
-							'type' => 'textbox',
-							'name' => 'twitter_consumer_secret',
-							'label' => __( 'Enter your Twitter Consumer secret key', 'kazaz' ),
-							'description' => __('It will be needed for OAuth settings as well!', 'kazaz'),
-						),
-						array(
-							'type' => 'textbox',
-							'name' => 'twitter_access_token',
-							'label' => __( 'Enter your Twitter Access Token', 'kazaz' ),
-							'description' => __('It will be needed to sign requests with your own Twitter account!', 'kazaz'),
-						),
-						array(
-							'type' => 'textbox',
-							'name' => 'twitter_access_token_secret',
-							'label' => __( 'Enter your Twitter Access Token secret', 'kazaz' ),
-							'description' => __('It will be needed to sign requests with your own Twitter account as well!', 'kazaz'),
-						),
-					),
-				),
-				/* Twitter key ends */
-			),
-		),
-		/* API Keys end */
+
 	)
 );
 
