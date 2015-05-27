@@ -6,7 +6,7 @@
 
 <?php if( is_single() ) : ?>
 	
-	<div id="post-<?php the_ID(); ?>" <?php post_class( 'col-lg-12 col-md-12' ); ?>>
+	<div id="post-<?php the_ID(); ?>" <?php post_class( 'col-xs-12' ); ?>>
 	
 		<?php if( has_post_thumbnail() && !post_password_required() && !is_attachment() ) : ?>
 		
@@ -65,7 +65,7 @@
 	
 <?php elseif( is_home() || is_front_page() ) : ?>
 
-	<div id="post-<?php the_ID(); ?>" <?php post_class( 'hello news-stacked col-lg-12 col-md-12' ); ?>><!-- news wrap -->
+	<div id="post-<?php the_ID(); ?>" <?php post_class( 'news-stacked col-xs-12' ); ?>><!-- news wrap -->
 
 		<div class="col-padded">
 			<?php if( has_post_thumbnail() && !post_password_required() && !is_attachment() ) : ?>
@@ -97,7 +97,7 @@
 	
 <?php else : ?>
 
-	<div id="post-<?php the_ID(); ?>" <?php post_class( 'news-stacked col-lg-12 col-md-12' ); ?>><!-- content wrap -->
+	<div id="post-<?php the_ID(); ?>" <?php post_class( 'news-stacked col-xs-12' ); ?>><!-- content wrap -->
 
 		<div class="col-padded">
 

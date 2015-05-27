@@ -135,7 +135,7 @@ if( !function_exists( 'k_sidebar_foot' ) ) {
 	*/
 	function k_paging() {
 		$paging_str = wp_link_pages( array( 
-			'before' => '<div class="page-links pull-right"><span class="link-pages-prefix">' . __( 'Pages:', 'kazaz' ) . '</span>', 
+			'before' => '<div class="page-links pull-right"><span class="link-pages-prefix">' . __( 'Pages:', 'kazaz' ) . '</span>',
 			'after' => '</div><div class="clearfix"></div>', 
 			'link_before' => '<span class="link-pages-pagenum">', 
 			'link_after' => '</span>',
@@ -175,7 +175,7 @@ if( !function_exists( 'k_pagination' ) ) {
 				'add_fragment' => ''
 			);
 			if( !empty( $wp_query->query_vars[ 's' ] ) ) $paginate_links_args[ 'add_args' ] = array( 's' => get_query_var( 's' ) );
-			$output .= '<div class="row gutter"><!-- row --><div class="col-lg-12">' . paginate_links( $paginate_links_args ) . '</div></div><!-- row end -->';
+			$output .= '<div class="row gutter"><!-- row --><div class="col-lg-12"><div class="col-padded">' . paginate_links( $paginate_links_args ) . '</div></div></div><!-- row end -->';
 		}
 		if( $echo ) echo $output;
 		else return $output;
