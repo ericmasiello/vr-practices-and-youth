@@ -664,3 +664,22 @@ table.em-calendar td.eventful-pre,
 	height: 1px;
 	overflow: hidden;
 }
+
+/*
+ * Footer logos
+ */
+
+.footer-logo {
+
+	max-width: 100%;
+	margin-top: 30px;
+	margin-top: 1.5rem;
+}
+
+@media only screen and (min-width: 800px) {
+
+	.footer-logo {
+
+		max-width: 680px;
+	}
+}
