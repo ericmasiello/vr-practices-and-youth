@@ -316,6 +316,7 @@ p {
 /*ul*/.footer-widgets {
 
 	list-style-type: none;
+	padding-left: 0;
 }
 
 .header-widgets > li,

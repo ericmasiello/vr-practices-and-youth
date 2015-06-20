@@ -34,6 +34,10 @@
                             </p>
                         <?php endif; ?>
 
+                        <?php if( vp_option( 'vpt_option.footer_message' ) ) : ?>
+                            <small><?php echo vp_option( 'vpt_option.footer_message' ); ?></small>
+                        <?php endif; ?>
+
                     </div>
 
 

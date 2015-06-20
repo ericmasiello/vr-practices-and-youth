@@ -1206,7 +1206,7 @@ a.list-group-item.active > .badge, .nav-pills > .active > a > .badge { backgroun
 	margin-right: -0.9375rem;
 }
 
-.col-padded {
+.col-padded.col-padded {
 	padding-left: 30px;
 	padding-right: 30px;
 	padding-left: 1.875rem;

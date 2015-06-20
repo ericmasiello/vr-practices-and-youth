@@ -395,6 +395,21 @@ return array(
 					)
 				),
 
+				array(
+					'type' => 'section',
+					'title' => __('Footer Message', 'kazaz'),
+					'name' => 'footer_extra',
+					'description' => __('Enter a message you would like to have appear in the footer of your site', 'kazaz'),
+					'fields' => array(
+						array(
+							'type' => 'textbox',
+							'name' => 'footer_message',
+							'label' => __('Footer Message', 'kazaz'),
+							'description' => __('This message will apepar in the footer of your site.', 'kazaz'),
+						)
+					)
+				),
+
 				/* error page image starts */
 				array(
 					'type' => 'section',
