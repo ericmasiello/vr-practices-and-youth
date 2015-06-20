@@ -24,13 +24,19 @@
 
         	        <div class="col-padded">
 
-                    <p>
-                        <a href="tel:<?php echo vp_option( 'vpt_option.contact_phone_1' ); ?>">(Phone) <?php echo vp_option( 'vpt_option.contact_phone_1' ); ?></a> or
-                        <a href="mailto:<?php echo get_option( 'admin_email' ); ?>"><?php echo get_option( 'admin_email' ); ?></a>
-                    </p>
+                        <p>
+                            <a href="mailto:<?php echo get_option( 'admin_email' ); ?>"><?php echo get_option( 'admin_email' ); ?></a>
+                        </p>
 
+                        <?php if( vp_option( 'vpt_option.footer_logo' ) ) : ?>
+                            <p>
+                                <img src="<?php echo vp_option( 'vpt_option.footer_logo' ); ?>" alt="<?php echo vp_option( 'vpt_option.footer_logo_text' ); ?>" class="footer-logo" />
+                            </p>
+                        <?php endif; ?>
 
                     </div>
+
+
         	    </div>
             
             </div><!-- row end -->

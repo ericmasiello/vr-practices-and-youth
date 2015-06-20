@@ -373,6 +373,28 @@ return array(
 						)
 					),
 				),
+
+				array(
+					'type' => 'section',
+					'title' => __('Footer Logo/Image', 'kazaz'),
+					'name' => 'footer_logos',
+					'description' => __('Upload the image you would like to appear in the footer.', 'kazaz'),
+					'fields' => array(
+						array(
+							'type' => 'upload',
+							'name' => 'footer_logo',
+							'label' => __('Footer Logo', 'kazaz'),
+							'description' => __('This image will appear in the footer.', 'kazaz'),
+						),
+						array(
+							'type' => 'textbox',
+							'name' => 'footer_logo_text',
+							'label' => __('Alt text used with image', 'kazaz'),
+							'default' => __('', 'kazaz'),
+						)
+					)
+				),
+
 				/* error page image starts */
 				array(
 					'type' => 'section',
