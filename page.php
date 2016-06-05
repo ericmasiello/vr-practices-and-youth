@@ -50,7 +50,7 @@ get_header();
 			</div><!-- inner custom column end -->
 
 		</div><!-- doc body wrapper end -->
-		
+
 	</div><!-- row end -->
 
 <?php

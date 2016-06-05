@@ -1,33 +1,41 @@
 <?php
 // Set up the objects needed
+// $args = array(
+// 	'posts_per_page' => -1,
+// 	'post_type' => 'page'
+// );
+
 $args = array(
-	'posts_per_page' => -1,
+  'post_parent' => $post->ID,
+	'hierarchical' => 0,
+  'sort_column' => 'menu_order',
+  'sort_order' => 'asc',
 	'post_type' => 'page'
 );
 
 $my_wp_query = new WP_Query();
 $all_wp_pages = $my_wp_query->query($args);
 
-//echo '<pre>Total pages ' . print_r( count($all_wp_pages), true ) . '</pre>';
-//echo '<pre>Total pages ' . print_r( $all_wp_pages, true ) . '</pre>';
+echo '<pre>ID ' . print_r( $post->ID, true ) . '</pre>';
+echo '<pre>Total pages ' . print_r( count($all_wp_pages), true ) . '</pre>';
+echo '<pre>Total pages ' . print_r( $all_wp_pages, true ) . '</pre>';
+//die();
 
 // Grab all child pages of the current page
 $page_children = get_page_children( $post->ID, $all_wp_pages );
 
-//echo '<pre>ID ' . $post->ID . '</pre>';
-
-//echo '<pre>Children ' . print_r( count($page_children), true ) . '</pre>';
-
-//echo '<pre>' . print_r( $post->post_parent, true ) . '</pre>';
+echo '<pre>ID ' . $post->ID . '</pre>';
+echo '<pre>Children ' . print_r( count($page_children), true ) . '</pre>';
+echo '<pre>' . print_r( $post->post_parent, true ) . '</pre>';
+echo '<pre>' . print_r( $page_ids, true ) . '</pre>';
+echo '<pre> --- end --- </pre>';
 
 
 if( count($page_children) > 0 ) {
-
     //Add existing "parent page" to list
-    $page_ids = array($post->ID);
+		$page_ids = array($post->ID);
 
-} elseif( $post->post_parent > 0 ){
-
+} elseif( $post->post_parent > 0 ) {
 
     $page_children = get_page_children( $post->post_parent, $all_wp_pages );
     $page_ids = array($post->post_parent);
@@ -35,14 +43,13 @@ if( count($page_children) > 0 ) {
 
 //Add child pages to list
 foreach ($page_children as &$value) {
-    array_push($page_ids,$value->ID);
+    array_push($page_ids, $value->ID);
 }
 
 // echo what we get back from WP to the browser
-//echo '<pre>' . print_r( $page_children, true ) . '</pre>';
-
-//echo '<pre>' . print_r( count($page_children), true ) . '</pre>';
-//echo '<pre>' . print_r( $page_ids, true ) . '</pre>';
+echo '<pre>' . print_r( $page_children, true ) . '</pre>';
+echo '<pre>' . print_r( count($page_children), true ) . '</pre>';
+echo '<pre>' . print_r( $page_ids, true ) . '</pre>';
 
 //Only output sub menu if there's stuff to list. Otherwise you'll get EVERY page
 if( count($page_ids) > 0 ) {
