@@ -1,11 +1,9 @@
 <?php
-// Set up the objects needed
-// $args = array(
-// 	'posts_per_page' => -1,
-// 	'post_type' => 'page'
-// );
-
-$args = array(
+$subnav_page_ids = array();
+/*
+ * Query to to see if this page has any children
+ */
+$query_for_child_pages_args = array(
   'post_parent' => $post->ID,
 	'hierarchical' => 0,
   'sort_column' => 'menu_order',
@@ -13,62 +11,61 @@ $args = array(
 	'post_type' => 'page'
 );
 
-$my_wp_query = new WP_Query();
-$all_wp_pages = $my_wp_query->query($args);
+$query_for_child_pages = new WP_Query();
+$child_pages_of_current_page = $query_for_child_pages->query($query_for_child_pages_args);
 
-echo '<pre>Current Page ID ' . print_r( $post->ID, true ) . '</pre>';
-echo '<pre>$all_wp_pages: Total pages ' . print_r( count($all_wp_pages), true ) . '</pre>';
-//echo '<pre>$all_wp_pages: Content ' . print_r( $all_wp_pages, true ) . '</pre>';
-foreach($all_wp_pages as &$value) {
-  echo '<pre>Post Title: ' . $value->post_title . '</pre>';
-  echo '<pre>Post ID: ' . $value->ID . '</pre>';
+// Current page has child pages if count > 0
+if(count($child_pages_of_current_page) > 0) {
+
+  // If the current page has a parent page, put it at the beginning of the list
+  if($post->post_parent > 0) {
+    array_push($subnav_page_ids, $post->post_parent);
+  }
+
+  // Then, add the current page to the list
+  array_push($subnav_page_ids, $post->ID);
+
+  // Then add the child pages of the current page to the list
+  foreach($child_pages_of_current_page as &$value) {
+    array_push($subnav_page_ids, $value->ID);
+  }
+
+} else { // Current page has no child pages
+
+  // Instead we will query the parent page's children which will
+  // rereive the current page and any its siblings
+
+  $query_for_child_pages_of_parent_args = array(
+    'post_parent' => $post->post_parent,
+  	'hierarchical' => 0,
+    'sort_column' => 'menu_order',
+    'sort_order' => 'asc',
+  	'post_type' => 'page'
+  );
+
+  $query_for_child_pages_of_parent = new WP_Query();
+  $child_pages_of_parent_page = $query_for_child_pages->query($query_for_child_pages_of_parent_args);
+
+  // Make the parent page first in the list
+  array_push($subnav_page_ids, $post->post_parent);
+  // Then add the child pages of the parent to the list
+  foreach($child_pages_of_parent_page as &$value) {
+    array_push($subnav_page_ids, $value->ID);
+  }
 }
-die();
 
-// Grab all child pages of the current page
-$page_children = get_page_children( $post->ID, $all_wp_pages );
+// Generate list of pages based on $subnav_page_ids compiled above
+$page_list_args = array(
+  'title_li' => '',
+  'include' => $subnav_page_ids,
+  'echo' => 0
+);
+$subnav_pages = wp_list_pages($page_list_args);
 
-echo '<pre>ID ' . $post->ID . '</pre>';
-echo '<pre>Children ' . print_r( count($page_children), true ) . '</pre>';
-echo '<pre>' . print_r( $post->post_parent, true ) . '</pre>';
-echo '<pre>' . print_r( $page_ids, true ) . '</pre>';
-echo '<pre> --- end --- </pre>';
-
-
-if( count($page_children) > 0 ) {
-    //Add existing "parent page" to list
-		$page_ids = array($post->ID);
-
-} elseif( $post->post_parent > 0 ) {
-
-    $page_children = get_page_children( $post->post_parent, $all_wp_pages );
-    $page_ids = array($post->post_parent);
-}
-
-//Add child pages to list
-foreach ($page_children as &$value) {
-    array_push($page_ids, $value->ID);
-}
-
-// echo what we get back from WP to the browser
-echo '<pre>' . print_r( $page_children, true ) . '</pre>';
-echo '<pre>' . print_r( count($page_children), true ) . '</pre>';
-echo '<pre>' . print_r( $page_ids, true ) . '</pre>';
-
-//Only output sub menu if there's stuff to list. Otherwise you'll get EVERY page
-if( count($page_ids) > 0 ) {
-
-    //fetch siblings
-    $page_list_args = array(
-        'title_li' => '',
-        'include' => $page_ids,
-        'echo' => 0
-    );
-
-    $list_pages = wp_list_pages( $page_list_args );
-
-    if ($list_pages): ?>
-        <ul class="page-list"><?php echo $list_pages; ?></ul>
-    <?php endif;
-}
+// Display the list
+if ($subnav_pages):
+  ?><ul class="page-list"><?php
+    echo $subnav_pages;
+  ?></ul><?php
+endif;
 ?>
