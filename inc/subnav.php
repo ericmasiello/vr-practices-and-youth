@@ -16,10 +16,14 @@ $args = array(
 $my_wp_query = new WP_Query();
 $all_wp_pages = $my_wp_query->query($args);
 
-echo '<pre>ID ' . print_r( $post->ID, true ) . '</pre>';
-echo '<pre>Total pages ' . print_r( count($all_wp_pages), true ) . '</pre>';
-echo '<pre>Total pages ' . print_r( $all_wp_pages, true ) . '</pre>';
-//die();
+echo '<pre>Current Page ID ' . print_r( $post->ID, true ) . '</pre>';
+echo '<pre>$all_wp_pages: Total pages ' . print_r( count($all_wp_pages), true ) . '</pre>';
+//echo '<pre>$all_wp_pages: Content ' . print_r( $all_wp_pages, true ) . '</pre>';
+foreach($all_wp_pages as &$value) {
+  echo '<pre>Post Title: ' . $value->post_title . '</pre>';
+  echo '<pre>Post ID: ' . $value->ID . '</pre>';
+}
+die();
 
 // Grab all child pages of the current page
 $page_children = get_page_children( $post->ID, $all_wp_pages );
