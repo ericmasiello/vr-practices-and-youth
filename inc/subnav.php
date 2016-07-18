@@ -34,7 +34,7 @@ if(!is_front_page()) {
 
   } else { // Current page has no child pages
 
-    // Instead we will query the parent page's children which will
+    // Instead we will query the page's parent's children which will
     // rereive the current page and any its siblings
 
     $query_for_child_pages_of_parent_args = array(
@@ -60,7 +60,8 @@ if(!is_front_page()) {
   $page_list_args = array(
     'title_li' => '',
     'include' => $subnav_page_ids,
-    'echo' => 0
+    'echo' => 0,
+    'sort_column' => 'post_parent, post_title'
   );
   $subnav_pages = wp_list_pages($page_list_args);
 
