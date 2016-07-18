@@ -54,14 +54,14 @@ if(!is_front_page()) {
     foreach($child_pages_of_parent_page as &$value) {
       array_push($subnav_page_ids, $value->ID);
     }
-  }
+  }  
 
   // Generate list of pages based on $subnav_page_ids compiled above
   $page_list_args = array(
     'title_li' => '',
     'include' => $subnav_page_ids,
     'echo' => 0,
-    'sort_column' => 'post_parent, post_title'
+    'sort_column' => 'menu_order, post_title'
   );
   $subnav_pages = wp_list_pages($page_list_args);
 
