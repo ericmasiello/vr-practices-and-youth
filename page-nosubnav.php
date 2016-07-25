@@ -1,6 +1,6 @@
 <?php
 /**
- * Theme's generic Page
+ * Template Name: No Sub Nav
  */
 ?>
 
@@ -29,7 +29,6 @@ get_header();
 				<?php } ?>
 
 				<h1 class="page-title"><?php the_title(); ?></h1>
-				<?php include("inc/subnav.php"); ?>
 
 
 				<div class="news-body  clearfix">

@@ -1,63 +1,75 @@
 <?php
-// Set up the objects needed
-$args = array(
-	'posts_per_page' => -1,
-	'post_type' => 'page'
-);
+// Only display if this is NOT the front page (aka home page) of the site
+if(!is_front_page()) {
+  $subnav_page_ids = array();
+  /*
+   * Query to to see if this page has any children
+   */
+  $query_for_child_pages_args = array(
+    'post_parent' => $post->ID,
+    'hierarchical' => 0,
+    'sort_column' => 'menu_order',
+    'sort_order' => 'asc',
+    'post_type' => 'page'
+  );
 
-$my_wp_query = new WP_Query();
-$all_wp_pages = $my_wp_query->query($args);
+  $query_for_child_pages = new WP_Query();
+  $child_pages_of_current_page = $query_for_child_pages->query($query_for_child_pages_args);
 
-//echo '<pre>Total pages ' . print_r( count($all_wp_pages), true ) . '</pre>';
-//echo '<pre>Total pages ' . print_r( $all_wp_pages, true ) . '</pre>';
+  // Current page has child pages if count > 0
+  if(count($child_pages_of_current_page) > 0) {
 
-// Grab all child pages of the current page
-$page_children = get_page_children( $post->ID, $all_wp_pages );
+    // If the current page has a parent page, put it at the beginning of the list
+    if($post->post_parent > 0) {
+      array_push($subnav_page_ids, $post->post_parent);
+    }
 
-//echo '<pre>ID ' . $post->ID . '</pre>';
+    // Then, add the current page to the list
+    array_push($subnav_page_ids, $post->ID);
 
-//echo '<pre>Children ' . print_r( count($page_children), true ) . '</pre>';
+    // Then add the child pages of the current page to the list
+    foreach($child_pages_of_current_page as &$value) {
+      array_push($subnav_page_ids, $value->ID);
+    }
 
-//echo '<pre>' . print_r( $post->post_parent, true ) . '</pre>';
+  } else { // Current page has no child pages
 
+    // Instead we will query the page's parent's children which will
+    // rereive the current page and any its siblings
 
-if( count($page_children) > 0 ) {
-
-    //Add existing "parent page" to list
-    $page_ids = array($post->ID);
-
-} elseif( $post->post_parent > 0 ){
-
-
-    $page_children = get_page_children( $post->post_parent, $all_wp_pages );
-    $page_ids = array($post->post_parent);
-}
-
-//Add child pages to list
-foreach ($page_children as &$value) {
-    array_push($page_ids,$value->ID);
-}
-
-// echo what we get back from WP to the browser
-//echo '<pre>' . print_r( $page_children, true ) . '</pre>';
-
-//echo '<pre>' . print_r( count($page_children), true ) . '</pre>';
-//echo '<pre>' . print_r( $page_ids, true ) . '</pre>';
-
-//Only output sub menu if there's stuff to list. Otherwise you'll get EVERY page
-if( count($page_ids) > 0 ) {
-
-    //fetch siblings
-    $page_list_args = array(
-        'title_li' => '',
-        'include' => $page_ids,
-        'echo' => 0
+    $query_for_child_pages_of_parent_args = array(
+      'post_parent' => $post->post_parent,
+      'hierarchical' => 0,
+      'sort_column' => 'menu_order',
+      'sort_order' => 'asc',
+      'post_type' => 'page'
     );
 
-    $list_pages = wp_list_pages( $page_list_args );
+    $query_for_child_pages_of_parent = new WP_Query();
+    $child_pages_of_parent_page = $query_for_child_pages->query($query_for_child_pages_of_parent_args);
 
-    if ($list_pages): ?>
-        <ul class="page-list"><?php echo $list_pages; ?></ul>
-    <?php endif;
+    // Make the parent page first in the list
+    array_push($subnav_page_ids, $post->post_parent);
+    // Then add the child pages of the parent to the list
+    foreach($child_pages_of_parent_page as &$value) {
+      array_push($subnav_page_ids, $value->ID);
+    }
+  }  
+
+  // Generate list of pages based on $subnav_page_ids compiled above
+  $page_list_args = array(
+    'title_li' => '',
+    'include' => $subnav_page_ids,
+    'echo' => 0,
+    'sort_column' => 'menu_order, post_title'
+  );
+  $subnav_pages = wp_list_pages($page_list_args);
+
+  // Display the list
+  if ($subnav_pages):
+    ?><ul class="page-list"><?php
+      echo $subnav_pages;
+    ?></ul><?php
+  endif;
 }
 ?>
