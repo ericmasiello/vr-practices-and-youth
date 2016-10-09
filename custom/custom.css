@@ -457,6 +457,10 @@ table.fullcalendar td ul {
 	padding-left: 0;
 }
 
+table.fullcalendar td li {
+	margin-bottom: 1em;
+}
+
 table.fullcalendar .days-names td {
 
 	height: auto;
