@@ -933,6 +933,20 @@ return array(
 			),
 		),
 	),
+
+	'Carousel' => array(
+    		'elements' => array(
+    			'carousel_container' => array(
+    				'title'   => __( 'STEP 1: Create carousel wrapper', 'kazaz' ),
+    				'code'    => '[carousel]' . __( 'Start adding carousel items here...', 'kazaz' ) . '[/carousel]'
+    			),
+    			'carousel_item' => array(
+    				'title'   => __( 'STEP 2: Add single carousel item', 'kazaz' ),
+    				'code'    => '[carousel_item] ' . __( 'Your images and text for each carousel item go in here. Be sure to remove any unused white space.', 'kazaz' ) . ' [/carousel_item]'
+    			),
+    		),
+    	),
+
 	// Accordion ends
 	// Slider starts
 	'Sliders' => array(

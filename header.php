@@ -13,7 +13,7 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title><?php wp_title( '|', true, 'right' ); ?></title>
-	<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic,600italic' rel='stylesheet' type='text/css'>
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
     <link rel="shortcut icon" href="<?php echo vp_option( 'vpt_option.site_logo_favicon' ); ?>">
@@ -22,6 +22,8 @@
 </head>
 
 <body <?php body_class(); ?>>
+
+    <a id="skip-navigation" href="#k-body">Skip Navigation</a>
 
     <!-- device test, don't remove. javascript needed! -->
     <span class="visible-xs"></span><span class="visible-sm"></span><span class="visible-md"></span><span class="visible-lg"></span>
@@ -34,7 +36,14 @@
         ?>
     </div>
     
-    <header id="k-head" class="container  site-header"><!-- container + head wrapper -->
+    <header id="k-head" class="container  site-header" role="banner"><!-- container + head wrapper -->
+
+
+        <ul class="header-widgets  col-padded">
+            <?php if( !function_exists( 'dynamic_sidebar' ) || !dynamic_sidebar( __( 'Header Widget', 'kazaz' ) ) ) : ?>
+            <!-- header widgets -->
+            <?php endif; ?>
+        </ul>
 
         <div class="row  col-padded">
             <h1 class="site-title  col-xs-12  col-sm-4">
@@ -43,7 +52,12 @@
                 </a>
                 <small class="site-title-tagline sr-only"><?php bloginfo( 'description' ); ?></small>
 
-                <a id="mobile-nav-switch" href="#drop-down-left"><span class="alter-menu-icon"></span></a><!-- alternative menu button -->
+
+                <a id="mobile-nav-switch" href="#navigation-mobile" title="Navigation menu"
+                        aria-label="Navigation menu" role="button" aria-controls="navigation-mobile" aria-expanded="false">
+                        <span class="alter-menu-icon">Menu</span>
+                    </a><!-- alternative menu button -->
+
             </h1>
             <div class="col-xs-12 col-sm-8 end-sm">
                 <?php
@@ -57,7 +71,7 @@
     
     </header><!-- container + head wrapper end -->
     
-    <div id="k-body"><!-- content wrapper -->
+    <div id="k-body" role="main"><!-- content wrapper -->
     
     	<div class="container"><!-- container -->
         

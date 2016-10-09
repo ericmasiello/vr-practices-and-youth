@@ -7,66 +7,16 @@
         </div><!-- container end -->
     
     </div><!-- content wrapper end -->
-
-    <?php if( function_exists( 'dynamic_sidebar' ) && ( dynamic_sidebar( __( 'Footer Column Left', 'kazaz' ) ) || dynamic_sidebar( __( 'Footer Column Middle', 'kazaz' ) ) || dynamic_sidebar( __( 'Footer Column Right', 'kazaz' ) ) ) ) : ?>
-        <div id="k-footer"><!-- footer -->
-
-            <div class="container"><!-- container -->
-
-                <div class="row no-gutter"><!-- row -->
-
-                    <div class="col-lg-4 col-md-4"><!-- widgets column left -->
-
-                        <div class="col-padded col-naked">
-
-                            <ul class="list-unstyled clear-margins"><!-- widgets -->
-
-                                <?php if( !function_exists( 'dynamic_sidebar' ) || !dynamic_sidebar( __( 'Footer Column Left', 'kazaz' ) ) ) : ?><?php endif; ?>
-
-                            </ul><!-- widgets end -->
-
-                        </div>
-
-                    </div><!-- widgets column left end -->
-
-                    <div class="col-lg-4 col-md-4"><!-- widgets column center -->
-
-                        <div class="col-padded col-naked">
-
-                            <ul class="list-unstyled clear-margins"><!-- widgets -->
-
-                                <?php if( !function_exists( 'dynamic_sidebar' ) || !dynamic_sidebar( __( 'Footer Column Middle', 'kazaz' ) ) ) : ?><?php endif; ?>
-
-                            </ul>
-
-                        </div>
-
-                    </div><!-- widgets column center end -->
-
-                    <div class="col-lg-4 col-md-4"><!-- widgets column right -->
-
-                        <div class="col-padded col-naked">
-
-                            <ul class="list-unstyled clear-margins"><!-- widgets -->
-
-                                <?php if( !function_exists( 'dynamic_sidebar' ) || !dynamic_sidebar( __( 'Footer Column Right', 'kazaz' ) ) ) : ?><?php endif; ?>
-
-                            </ul>
-
-                        </div>
-
-                    </div><!-- widgets column right end -->
-
-                </div><!-- row end -->
-
-            </div><!-- container end -->
-
-        </div><!-- footer end -->
-    <?php endif; ?>
     
-    <footer id="k-subfooter" class="site-footer  text-center"><!-- subfooter -->
+    <footer id="k-subfooter" class="site-footer  text-center  container"><!-- subfooter -->
+
+        <ul class="footer-widgets">
+            <?php if( !function_exists( 'dynamic_sidebar' ) || !dynamic_sidebar( __( 'Footer Widget', 'kazaz' ) ) ) : ?>
+            <!-- footer widgets -->
+            <?php endif; ?>
+        </ul>
     
-    	<div class="container"><!-- container -->
+    	<div class="container" role="contentinfo"><!-- container -->
         
         	<div class="row"><!-- row -->
 
@@ -74,13 +24,23 @@
 
         	        <div class="col-padded">
 
-        	            <p><?php bloginfo( 'name' ); ?>: <?php bloginfo( 'description' ); ?></p>
+                        <p>
+                            <a href="mailto:<?php echo get_option( 'admin_email' ); ?>"><?php echo get_option( 'admin_email' ); ?></a>
+                        </p>
 
-        	            <p>Phone: <a href="tel:<?php echo vp_option( 'vpt_option.contact_phone_1' ); ?>"><?php echo vp_option( 'vpt_option.contact_phone_1' ); ?></a> or <a href="mailto:<?php echo vp_option( 'vpt_option.contact_email' ); ?>"><?php echo vp_option( 'vpt_option.contact_email' ); ?></a></p>
+                        <?php if( vp_option( 'vpt_option.footer_logo' ) ) : ?>
+                            <p>
+                                <img src="<?php echo vp_option( 'vpt_option.footer_logo' ); ?>" alt="<?php echo vp_option( 'vpt_option.footer_logo_text' ); ?>" class="footer-logo" />
+                            </p>
+                        <?php endif; ?>
 
-                        <p class="copy-text"><?php echo vp_option( 'vpt_option.theme_copyright' ); ?></p>
+                        <?php if( vp_option( 'vpt_option.footer_message' ) ) : ?>
+                            <small><?php echo vp_option( 'vpt_option.footer_message' ); ?></small>
+                        <?php endif; ?>
 
                     </div>
+
+
         	    </div>
             
             </div><!-- row end -->
@@ -90,9 +50,11 @@
     </footer><!-- subfooter end -->
     
 	<?php wp_footer(); ?>
-    
+
+    <!-- Begin Analytics -->
     <?php k_google_analytics(); ?>
-    
+    <!-- End Analytics -->
+
   </body>
   
 </html>

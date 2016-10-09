@@ -6,18 +6,35 @@ a:focus {
 ul, ol {
 
 	padding-left: 20px;
-	padding-left: 1rem;
+	padding-left: 1.25rem;
+}
+
+p {
+
+	margin-bottom: 15px;
+	margin-bottom: .75rem;
 }
 
 .site-header, .site-footer {
 
 	padding-top: 30px;
-	padding-bottom: 30px;
+	padding-top: 1.875rem;
+}
+
+.site-header {
+
+	border-bottom: 1px solid #ececec;
+	margin-bottom: 30px;
+	margin-bottom: 1.875rem;
+	padding-bottom: 20px;
+	padding-bottom: 1.25rem;
 }
 
 .site-footer {
 
-	border-top: 1px solid #C6C6C5;
+	padding-bottom: 30px;
+	padding-bottom: 1.875rem;
+	border-top: 1px solid #ececec;
 	color: #555;
 	font-size: 14px;
 	font-size: .875rem;
@@ -30,7 +47,21 @@ ul, ol {
 	.site-header, .site-footer {
 
 		padding-top: 50px;
+		padding-top: 2.5rem;
+	}
+
+	.site-footer {
+
 		padding-bottom: 50px;
+		padding-bottom: 2.5rem;
+	}
+
+	.site-header {
+
+		padding-bottom: 40px;
+		padding-bottom: 2rem;
+		margin-bottom: 50px;
+		margin-bottom: 2.5rem;
 	}
 }
 
@@ -38,11 +69,12 @@ ul, ol {
 
 	display: inline-block;
 	margin: 0;
+	padding-left: 0;
 }
 
 .site-title > a[rel="home"] {
 
-	background: url('../public/img/MDPromise.svg') no-repeat 0 center transparent;
+	background: url('../public/img/vrandyouth.svg') no-repeat 0 center transparent;
 	background-size: contain;
 	display: block;
 	text-indent: -9999px;
@@ -64,7 +96,7 @@ ul, ol {
 	.site-title > a[rel="home"] {
 
 		height: 60px;
-		width: 250px;
+		width: 225px;
 	}
 }
 
@@ -73,7 +105,7 @@ ul, ol {
 	.site-title > a[rel="home"] {
 
 		height: 76px;
-		width: 300px;
+		width: 285px;
 	}
 }
 
@@ -163,7 +195,7 @@ ul, ol {
 	font-weight: normal;
 }
 
-.form-control {
+.form-control, .btn {
 
 	font-size: 16px;
 	font-size: 1rem;
@@ -225,5 +257,434 @@ ul, ol {
 		bottom: 1.25rem;
 		right: 20px;
 		right: 1.25rem;
+	}
+}
+
+@media only screen and (min-width: 48em) {
+
+	.plm-sm {
+
+		padding-left: 16px !important;
+		padding-left: 1rem !important;
+	}
+
+	.prm-sm {
+
+		padding-right: 16px !important;
+		padding-right: 1rem !important;
+	}
+
+	.phm-sm {
+
+		padding-left: 16px !important;
+		padding-left: 1rem !important;
+		padding-right: 16px !important;
+		padding-right: 1rem !important;
+	}
+}
+
+@media only screen and (min-width: 62em) {
+
+	.plm-md {
+
+		padding-left: 16px !important;
+		padding-left: 1rem !important;
+	}
+
+	.prm-md {
+
+		padding-right: 16px !important;
+		padding-right: 1rem !important;
+	}
+
+	.phm-md {
+
+		padding-left: 16px !important;
+		padding-left: 1rem !important;
+		padding-right: 16px !important;
+		padding-right: 1rem !important;
+	}
+}
+
+.well :first-child {
+
+	margin-top: 4px;
+	margin-top: .25rem;
+}
+
+/*ul*/.header-widgets,
+/*ul*/.footer-widgets {
+
+	list-style-type: none;
+	padding-left: 0;
+}
+
+.header-widgets > li,
+.footer-widgets > li{
+
+	display: inline-block;
+}
+
+/*ul*/.header-widgets {
+
+
+	text-align: right;
+}
+
+.header-widgets .input-group {
+
+	max-width: 20rem;
+}
+
+.footer-widgets {
+
+	text-align: center;
+}
+
+.footer-widgets > li {
+
+	width: 50%;
+	min-width: 300px;
+	min-width: 18.75rem;
+	max-width: 50rem;
+}
+
+/* Constant contact widget */
+
+.widget_sf_widget_constantcontact .title-widget {
+
+	font-size: 1em;
+	margin-top: 0;
+	margin-bottom: .5rem;
+}
+
+/* Search Widget */
+.widget_search form {
+
+	display: inline-block;
+}
+
+.menu-item-has-children > a::after {
+
+	speak: none;
+	font-family: "FontAwesome";
+	content: "\f078";
+	font-size: 10px;
+	font-size: .5rem;
+	position: absolute;
+	right: -15px;
+	right: -.75rem;
+}
+
+
+/*
+ * news body rules
+ */
+
+.news-body > h1:first-child,
+.news-body > h2:first-child,
+.news-body > h3:first-child,
+.news-body > h4:first-child,
+.news-body > h5:first-child,
+.news-body > h6:first-child {
+
+	margin-top: 0;
+}
+
+.news-body > div {
+
+	max-width: 100%;
+}
+
+.news-body .row + .row{
+
+	margin-top: 3rem;
+}
+
+/*
+ * Calendar
+ */
+
+table.em-calendar td.eventful a,
+table.em-calendar td.eventful-today a,
+table.em-calendar td.eventful-pre a,
+table.em-calendar td.eventful-post a{
+
+	color: #337AB7;
+}
+
+table.em-calendar td.eventful a:hover,
+table.em-calendar td.eventful-today a:hover,
+table.em-calendar td.eventful a:focus,
+table.em-calendar td.eventful-today a:focus,
+table.em-calendar td.eventful-pre a:focus,
+table.em-calendar td.eventful-post a:focus {
+
+	color: #23527C;
+}
+
+table.em-calendar td.eventless-today,
+table.em-calendar td.eventful-today {
+
+	background-color: #cce7ff;
+}
+
+
+table.fullcalendar {
+	width: auto;
+}
+
+table.fullcalendar thead td {
+
+	border: none;
+}
+
+table.fullcalendar tbody {
+
+	font-size: .875rem;
+}
+
+table.fullcalendar tbody td {
+
+	border: 1px solid #CCC;
+	width: 8rem;
+	height: 8rem;
+}
+
+table.fullcalendar td ul {
+
+	list-style-type: none;
+	padding-left: 0;
+}
+
+table.fullcalendar td li {
+	margin-bottom: 1em;
+}
+
+table.fullcalendar .days-names td {
+
+	height: auto;
+}
+
+table.em-calendar thead {
+
+	font-size: 24px;
+	font-size: 1.5rem;
+}
+
+table.fullcalendar .month_name {
+
+	text-align: center;
+}
+
+.em-calnav {
+
+	display: inline-block;
+	font-size: 0; /* hides the '<<' & '>>' text inserted by the plugin */
+	margin: 0 12px;
+	margin: 0 .75rem;
+}
+
+.em-calnav-next {
+
+	float: right;
+}
+
+.em-calnav-prev::before,
+.em-calnav-next::after {
+
+	display: inline-block;
+	font-family: "FontAwesome";
+	font-size: 24px;
+	font-size: 1.5rem;
+}
+
+.em-calnav-prev::before {
+
+	content: "\f137";
+}
+
+.em-calnav-next::after {
+
+	content: "\f138";
+}
+
+table.em-calendar td.eventless-pre,
+.em-calendar td.eventless-post,
+table.em-calendar td.eventful-pre,
+.em-calendar td.eventful-post
+{
+
+	color: #353535;
+	background-color: #fdfdfd;
+	border-color: #eee;
+}
+
+.em-calendar tr:nth-child(2) .eventless-pre,
+.em-calendar tr:nth-child(2) .eventful-pre,
+.em-calendar tr:last-child .eventless-post,
+.em-calendar tr:last-child .eventful-post{
+
+	border-bottom-color: #ccc;
+}
+
+.em-calendar tr:nth-child(2) .eventless-pre:nth-child(1),
+.em-calendar tr:nth-child(2) .eventful-pre:nth-child(1) {
+
+	border-left-color: #ccc;
+}
+
+.em-calendar tr:last-child .eventless-post:last-child,
+.em-calendar tr:last-child .eventful-post:last-child {
+
+	border-right-color: #ccc;
+}
+
+@media only screen and (max-width: 40em) {
+
+	table.fullcalendar,
+	table.fullcalendar tbody,
+	table.fullcalendar thead,
+	table.fullcalendar tr,
+	table.fullcalendar tbody td,
+	table.fullcalendar tbody th{
+
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+
+	table.fullcalendar tbody {
+
+		font-size: 1rem;
+	}
+
+	table.fullcalendar thead tr {
+
+		overflow: hidden;
+	}
+
+	table.fullcalendar thead td {
+
+		display: inline-block;
+		width: auto;
+	}
+
+	table.fullcalendar tbody td {
+
+		border-top: 0;
+	}
+
+	table.fullcalendar thead {
+
+		border-bottom: 1px solid #ccc;
+	}
+
+	table.fullcalendar thead .month_name {
+
+		text-align: left;
+	}
+
+	table.fullcalendar .days-names,
+	table.fullcalendar .eventless-pre,
+	table.fullcalendar .eventful-pre,
+	table.fullcalendar .eventless-post,
+	table.fullcalendar .eventful-post {
+
+		display: none;
+	}
+
+	.em-calnav-prev {
+
+		margin-left: 0;
+	}
+
+	.em-calnav-next {
+
+		margin-right: 0;
+	}
+}
+
+/*
+ * Custom styles for Slider
+ */
+
+.carousel-text {
+
+	display: none;
+	overflow: hidden;
+	font-size: 20px;
+	font-size: 1.25rem;
+}
+
+.carousel-text::after {
+
+	content: "";
+	text-align: right;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 64px;
+	height: 4rem;
+	background: linear-gradient(to bottom, transparent 0%,#ffffff 100%); /* W3C */
+}
+
+@media only screen and (min-width: 48em) {
+
+	.carousel-text {
+
+		display: block;
+	}
+}
+
+/*
+ * Skip Nav
+ */
+
+#skip-navigation {
+	padding: 1em;
+	position: absolute;
+	top: -20em;
+	left: 1em;
+	z-index: 1000;
+	transition: top .3s ease-in-out;
+}
+
+#skip-navigation:focus {
+	position: absolute;
+	top: 20px;
+	background: #FFF;
+}
+
+/*
+ * Hide text
+ */
+
+.a11y-text-hide {
+	position: absolute;
+	left: -10000px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
+
+/*
+ * Footer logos
+ */
+
+.footer-logo {
+
+	max-width: 100%;
+	margin-top: 30px;
+	margin-top: 1.5rem;
+}
+
+@media only screen and (min-width: 800px) {
+
+	.footer-logo {
+
+		max-width: 680px;
 	}
 }

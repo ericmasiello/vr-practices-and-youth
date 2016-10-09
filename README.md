@@ -1,3 +1,2 @@
-# mdpromise
-MD Promise WP Theme
-panda
+# RRTC (VR Practices and Youth)
+Wordpress theme
