@@ -13,10 +13,9 @@
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php wp_title( '|', true, 'right' ); ?></title>
-    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic,600italic' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-    <link rel="shortcut icon" href="<?php echo vp_option( 'vpt_option.site_logo_favicon' ); ?>">
     <script src="<?php echo get_bloginfo('template_directory'); ?>/custom/modernizr.custom.js"></script>
     <?php wp_head(); ?>	
 </head>
@@ -26,7 +25,10 @@
     <a id="skip-navigation" href="#k-body">Skip Navigation</a>
 
     <!-- device test, don't remove. javascript needed! -->
-    <span class="visible-xs"></span><span class="visible-sm"></span><span class="visible-md"></span><span class="visible-lg"></span>
+    <span class="visible-xs"></span>
+    <span class="visible-sm"></span>
+    <span class="visible-md"></span>
+    <span class="visible-lg"></span>
     <!-- device test end -->
     
     <div id="k-functional-wrap">
@@ -37,14 +39,10 @@
     </div>
     
     <header id="k-head" class="container  site-header" role="banner"><!-- container + head wrapper -->
-
-
-        <ul class="header-widgets  col-padded">
-            <?php if( !function_exists( 'dynamic_sidebar' ) || !dynamic_sidebar( __( 'Header Widget', 'kazaz' ) ) ) : ?>
+        <?php if( function_exists( 'dynamic_sidebar' )) : ?>
             <!-- header widgets -->
-            <?php endif; ?>
-        </ul>
-
+            <?php dynamic_sidebar( __( 'Header Widget', 'kazaz' ) ) ?>
+        <?php endif; ?>
         <div class="row  col-padded">
             <h1 class="site-title  col-xs-12  col-sm-4">
                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
@@ -66,9 +64,6 @@
                 ?>
             </div>
         </div>
-
-        <?php /* commenting out search form for now ... */ //include_once "inc/search.php"; ?>
-    
     </header><!-- container + head wrapper end -->
     
     <div id="k-body" role="main"><!-- content wrapper -->
