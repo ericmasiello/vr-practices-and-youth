@@ -10,12 +10,12 @@
 <!--[if IE 11]><html class="no-js ie9-plus  lte-ie11" <?php language_attributes(); ?>><![endif]-->
 <html class="no-js" <?php language_attributes(); ?>>
 <head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title><?php wp_title( '|', true, 'right' ); ?></title>
-	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic,600italic' rel='stylesheet' type='text/css'>
-	<link rel="profile" href="http://gmpg.org/xfn/11">
-	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+    <meta charset="<?php bloginfo( 'charset' ); ?>">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><?php wp_title( '|', true, 'right' ); ?></title>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic,600italic' rel='stylesheet' type='text/css'>
+    <link rel="profile" href="http://gmpg.org/xfn/11">
+    <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
     <link rel="shortcut icon" href="<?php echo vp_option( 'vpt_option.site_logo_favicon' ); ?>">
     <script src="<?php echo get_bloginfo('template_directory'); ?>/custom/modernizr.custom.js"></script>
     <?php wp_head(); ?>	
@@ -30,9 +30,9 @@
     <!-- device test end -->
     
     <div id="k-functional-wrap">
-		<?php 
-		// theme's functional navigation
-		if( has_nav_menu( 'functional' ) ) : k_navig_functional(); endif;
+        <?php 
+        // theme's functional navigation
+        if( has_nav_menu( 'functional' ) ) : k_navig_functional(); endif;
         ?>
     </div>
     
@@ -73,5 +73,5 @@
     
     <div id="k-body" role="main"><!-- content wrapper -->
     
-    	<div class="container"><!-- container -->
+        <div class="container"><!-- container -->
         

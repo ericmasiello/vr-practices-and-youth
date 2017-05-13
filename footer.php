@@ -26,13 +26,13 @@
             <?php endif; ?>
         </ul>
 
-    	<div class="container" role="contentinfo"><!-- container -->
+        <div class="container" role="contentinfo"><!-- container -->
 
-        	<div class="row"><!-- row -->
+            <div class="row"><!-- row -->
 
-        	    <div class="col-xs-12">
+                <div class="col-xs-12">
 
-        	        <div class="col-padded">
+                    <div class="col-padded">
 
                         
 
@@ -49,7 +49,7 @@
                     </div>
 
 
-        	    </div>
+                </div>
 
             </div><!-- row end -->
 
@@ -57,7 +57,7 @@
 
     </footer><!-- subfooter end -->
 
-	<?php wp_footer(); ?>
+    <?php wp_footer(); ?>
 
     <!-- Begin Analytics -->
     <?php k_google_analytics(); ?>
