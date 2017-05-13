@@ -1,67 +1,32 @@
-/*** DEFAULT COLORS/STYLES ***/
-/* Root menu */
-.k-dropdown-menu {
-}
-/* Root links */
-.k-dropdown-menu a,
-.k-dropdown-menu a:link,
-.k-dropdown-menu a:visited {
-    text-decoration: none;
-    padding: 5px 9px;
-}
-/* Root link hover */
-.k-dropdown-menu a:hover,
-.k-dropdown-menu li.dropdown-menu-hover > a {
-
-}
-/* Root menu item hover */
-.k-dropdown-menu li:hover,
-.k-dropdown-menu li.dropdown-menu-hover {
-    background: #e0e2e2;
-}
-/* Submenus */
-.k-dropdown-menu ul {
-    border: 1px solid #c4c7c8;
-    background: #e0e2e2;
-}
-/* Submenu item hover */
-.k-dropdown-menu ul li:hover,
-.k-dropdown-menu ul li.dropdown-menu-hover {
-    background: #c4c7c8;
-}
-
-/* Optional submenu drop shadow */
-.dropdown-menu-shadow {
-    box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.3);
-}
-
-/*** ESSENTIAL STYLES ***/
-.k-dropdown-menu {
-    display: inline-block;
-}
 .k-dropdown-menu,
 .k-dropdown-menu ul {
     margin: 0;
     padding: 0;
     list-style: none;
 }
-.k-dropdown-menu ul {
+
+.k-dropdown-menu a {
+    text-decoration: none;
+    padding: 5px 9px;
+}
+
+.k-dropdown-menu > li > ul {
     left: -9999px;
     position: absolute;
     z-index: 1000000;
+    border: 1px solid #c4c7c8;
+    background-color: #fff;
 }
 
+/* Positions submenu items for when visible */
 .k-dropdown-menu ul.show-menu {
     left: 0;
 }
 
+/* Positions right-most submenu item for when visible */
 .k-dropdown-menu > li:last-child ul.show-menu {
     left: auto;
     right: 0;
-}
-
-.k-dropdown-menu ul ul {
-    position: static;
 }
 
 .k-dropdown-menu li {
@@ -73,64 +38,4 @@
 
 .k-dropdown-menu li a {
     display: block;
-}
-
-.k-dropdown-menu ul li {
-    position: relative;
-    display: block;
-}
-
-/* Optional submenu arrows */
-span.dropdown-menu-sub-indicator {
-    margin-left: .4em;
-    display: inline-block;
-    vertical-align: baseline;
-    /* Image Replacement */
-    background-color: transparent;
-    background-image: url('arrows-000000.png');
-    background-repeat: no-repeat;
-    background-position: 0 -100px;
-    width: 10px;
-    height: 10px;
-    border: 0;
-    overflow: hidden;
-    /* IE7 image replacement fix */
-    *text-indent: -9999px;
-}
-
-span.dropdown-menu-sub-indicator:before {
-    /* Image replacement */
-    content: "";
-    display: block;
-    width: 0;
-    height: 100%;
-}
-/* Arrow hovers */
-.k-dropdown-menu li:hover > a > span.dropdown-menu-sub-indicator,
-.k-dropdown-menu li.dropdown-menu-hover > a > span.dropdown-menu-sub-indicator {
-    background-position: -10px -100px;
-}
-/* Point arrows to the right for anchors in subs */
-.k-dropdown-menu ul span.dropdown-menu-sub-indicator {
-    background-position: 0 0;
-}
-.k-dropdown-menu ul li:hover > a > span.dropdown-menu-sub-indicator,
-.k-dropdown-menu ul li.dropdown-menu-hover > a > span.dropdown-menu-sub-indicator {
-    background-position: -10px 0;
-}
-
-/* Vertical-style menu with default width */
-.dropdown-menu-vertical {
-    width: 250px;
-}
-.dropdown-menu-vertical li {
-    display: block;
-    position: relative;
-}
-.dropdown-menu-vertical span.dropdown-menu-sub-indicator {
-    background-position: 0 0;
-}
-.dropdown-menu-vertical li:hover > a > span.dropdown-menu-sub-indicator,
-.dropdown-menu-vertical li.dropdown-menu-hover > a > span.dropdown-menu-sub-indicator {
-    background-position: -10px 0;
 }

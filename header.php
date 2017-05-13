@@ -33,7 +33,7 @@
 
     <?php include_once('inc/svgs.php'); ?>
     
-    <header id="k-head" class="site-header" role="banner">
+    <header class="site-header" role="banner">
         <div class="container">
             <?php
             // theme's functional navigation
@@ -60,7 +60,9 @@
                 aria-controls="navigation-mobile"
                 aria-expanded="false"
             >
-                <span class="alter-menu-icon">Menu</span>
+                <span class="alter-menu-icon">
+                    <span class="sr-only">Menu</span>
+                </span>
             </a>
             <?php if( has_nav_menu( 'primary' ) ) : k_navig_head(); endif; ?>
         </div>

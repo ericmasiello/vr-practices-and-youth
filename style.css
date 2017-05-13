@@ -3,6 +3,16 @@ Theme Name: VR Practices and Youth
 Author: Eric & Hyun Masiello
 Version: 2.0.0
 */
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('fonts/glyphicons-halflings-regular.eot');
+  src:
+    url('fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),
+    url('fonts/glyphicons-halflings-regular.woff2') format('woff2'),
+    url('fonts/glyphicons-halflings-regular.woff') format('woff'),
+    url('fonts/glyphicons-halflings-regular.ttf') format('truetype'),
+    url('fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
 
 html {
   font-size: 16px;
@@ -27,6 +37,8 @@ body {
   font-size: 1em;
   line-height: 1.5em;
   color: #444545;
+  margin: 0;
+  padding-top: 1.875rem;
 }
 
 p {
@@ -193,14 +205,183 @@ img.alignleft, img.aligncenter, img.alignright {
   text-align: center;
 }
 
+/*
+ * Container
+ */
+
 .container {
   max-width: 68.75rem;
   margin: auto;
+  padding: 0 0.625rem;
 }
 
 /*
-* Utility Classes
-*/
+ * Site Header
+ */
+
+.site-header {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+/*
+ * Logo
+ */
+
+.site-title {
+  margin: 0;
+  padding: 0;
+}
+
+.site-title > a[rel="home"] {
+  background: url('public/img/vrandyouth.svg') no-repeat 0 center transparent;
+  background-size: contain;
+  display: block;
+  text-indent: -9999px;
+  height: 48px;
+  width: 170px;
+}
+
+@media only screen and (min-width: 55em) {
+  .site-title > a[rel="home"] {
+    height: 55px;
+    width: 200px;
+  }
+}
+
+@media only screen and (min-width: 65em) {
+  .site-title > a[rel="home"] {
+    height: 60px;
+    width: 225px;
+  }
+}
+
+@media only screen and (min-width: 75em) {
+  .site-title > a[rel="home"] {
+    height: 76px;
+    width: 285px;
+  }
+}
+
+/*
+ * Hamburger
+ */
+#mobile-nav-switch {
+  display: block;
+  position: absolute;
+  width: 1.5rem;
+  right: 0.625rem;
+  top: 1rem;
+}
+
+@media (min-width: 48rem) {
+  #mobile-nav-switch {
+    display: none;
+    position: absolute;
+  }
+}
+
+#mobile-nav-switch:focus {
+  outline: none;
+}
+
+.alter-menu-icon {
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-image: url(public/img/alter-menu.png);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  transform: rotate(0deg);
+  transition: transform 250ms ease-out 0s;
+}
+
+.open .alter-menu-icon {
+  background-position: 0 -24px;
+  transform: rotate(-180deg);
+  transition: transform 250ms ease-out 0s;
+}
+
+/*
+ * Primary Navigation 
+ */
+
+.menu-primary-menu-container {
+  font-family: 'Fjalla One', sans-serif;
+}
+
+.menu-primary-menu-container a {
+  font-size: 1.5rem;
+}
+
+.menu-primary-menu-container li {
+  display: block;
+}
+
+@media(min-width: 48rem) {
+  .menu-primary-menu-container > ul {
+    display: flex;
+  }
+}
+
+.menu-primary-menu-container a {
+  border-bottom: 1px solid #eee;
+  display: block;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.menu-primary-menu-container ul ul a {
+  text-transform: none;
+}
+
+.menu-primary-menu-container ul ul ul a {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+}
+
+.menu-primary-menu-container a:hover {
+  background-color: #eee
+}
+
+/*
+ * Primary Mobile Navigation 
+ */
+.mobile-nav {
+  display: none;
+  margin-top: 0.5rem;
+}
+
+.mobile-nav a {
+  border-bottom: 1px solid #eee;
+  display: block;
+  padding: 0.75rem 1rem 0.75rem 0;
+  position: relative;
+  text-decoration: none;
+}
+
+.mobile-nav a::after {
+  content: "\e258";
+  color: #ccc;
+  font-family: 'Glyphicons Halflings';  
+  font-size: 1rem;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+/*
+ * Utility Classes
+ */
+
+.list-unstyled {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
 
 .sr-only {
   position: absolute;
@@ -220,4 +401,36 @@ img.alignleft, img.aligncenter, img.alignright {
   margin: 0;
   overflow: visible;
   clip: auto;
+}
+
+/*
+ * Skip Nav
+ */
+
+#skip-navigation {
+  padding: 1em;
+  position: absolute;
+  top: -20em;
+  left: 1em;
+  z-index: 1000;
+  transition: top .3s ease-in-out;
+}
+
+#skip-navigation:focus {
+  position: absolute;
+  top: 20px;
+  background: #FFF;
+}
+
+/*
+ * Hide text
+ */
+
+.a11y-text-hide {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
