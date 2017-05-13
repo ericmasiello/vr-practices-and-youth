@@ -12,11 +12,11 @@ get_header();
 <div class="row no-gutter fullwidth"><!-- row -->
     
     <div class="col-lg-12 col-md-12"><!-- doc body wrapper -->
-    	
+        
         <div class="col-padded"><!-- inner custom column -->
         
             <figure class="news-featured-image">
-            	<?php k_attached_image(); ?>
+                <?php k_attached_image(); ?>
             </figure>
             
             <h1 class="page-title"><?php the_title(); ?></h1>

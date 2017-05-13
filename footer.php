@@ -9,6 +9,16 @@
     </div><!-- content wrapper end -->
 
     <footer id="k-subfooter" class="site-footer  text-center  container"><!-- subfooter -->
+        <?php if (is_front_page()) : ?>
+            <?php if( !function_exists( 'dynamic_sidebar' ) || !dynamic_sidebar( __( 'Home Page Footer', 'kazaz' ) ) ) : ?>
+                <!-- footer widgets -->
+            <?php endif; ?>
+        <?php endif; ?>
+        <?php if( vp_option( 'vpt_option.contact_form_id' ) ) : ?>
+            <div id="contactus">
+                <?php echo do_shortcode( '[contact-form-7 id="' . vp_option( 'vpt_option.contact_form_id' ) . '" title="Contact form"]' ); ?>            
+            </div>
+        <?php endif; ?>
 
         <ul class="footer-widgets">
             <?php if( !function_exists( 'dynamic_sidebar' ) || !dynamic_sidebar( __( 'Footer Widget', 'kazaz' ) ) ) : ?>
@@ -16,13 +26,13 @@
             <?php endif; ?>
         </ul>
 
-    	<div class="container" role="contentinfo"><!-- container -->
+        <div class="container" role="contentinfo"><!-- container -->
 
-        	<div class="row"><!-- row -->
+            <div class="row"><!-- row -->
 
-        	    <div class="col-xs-12">
+                <div class="col-xs-12">
 
-        	        <div class="col-padded">
+                    <div class="col-padded">
 
                         
 
@@ -39,7 +49,7 @@
                     </div>
 
 
-        	    </div>
+                </div>
 
             </div><!-- row end -->
 
@@ -47,7 +57,7 @@
 
     </footer><!-- subfooter end -->
 
-	<?php wp_footer(); ?>
+    <?php wp_footer(); ?>
 
     <!-- Begin Analytics -->
     <?php k_google_analytics(); ?>

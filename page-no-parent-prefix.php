@@ -1,6 +1,6 @@
 <?php
 /**
- * Theme's generic Page
+ * Template Name: No Parent Page Prefix
  */
 ?>
 
@@ -17,7 +17,6 @@
         <?php } ?>
 
         <h1 class="page-title">
-          <?php echo get_the_title($post->post_parent); ?> - 
           <?php the_title(); ?>
         </h1>
 
