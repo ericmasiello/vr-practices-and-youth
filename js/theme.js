@@ -28,12 +28,12 @@
 	
 	/* ---------- handle navigation for smaller devices */
 	CHEF.mobileMenuClone = '';
-	if( $( 'nav#k-menu' ).length ) CHEF.mobileMenuClone = $( 'nav#k-menu' ).clone().attr( 'id', 'navigation-mobile' ).attr('class', 'mobile-nav');
+	if( $( 'nav#navigation-desktop' ).length ) CHEF.mobileMenuClone = $( 'nav#navigation-desktop' ).clone().attr( 'id', 'navigation-mobile' ).attr('class', 'mobile-nav');
 	CHEF.mobileNav = function() {
-		if( $( 'nav#k-menu' ).length ) CHEF.mobileMenuClone.insertAfter( 'nav#k-menu' );
+		if( $( 'nav#navigation-desktop' ).length ) CHEF.mobileMenuClone.insertAfter( 'nav#navigation-desktop' );
 		if( $( 'nav#navigation-mobile' ).length ) {
-			$( 'nav#navigation-mobile' ).removeClass( 'k-main-navig' );
-			$( 'nav#navigation-mobile div > ul' ).removeAttr( 'id' ).removeClass( 'k-dropdown-menu' ).addClass( 'list-unstyled' );
+			$( 'nav#navigation-mobile' ).removeClass( 'desktop-nav' );
+			$( 'nav#navigation-mobile div > ul' ).removeAttr( 'id' ).removeClass( 'dropdown-menu' ).addClass( 'list-unstyled' );
 		}
 	}
 	CHEF.listenerMenu = function() {

@@ -345,6 +345,11 @@ img.alignleft, img.aligncenter, img.alignright {
   background-color: #eee
 }
 
+.sub-menu {
+  margin: 0;
+  padding: 0;
+}
+
 /*
  * Primary Mobile Navigation 
  */
@@ -370,6 +375,62 @@ img.alignleft, img.aligncenter, img.alignright {
   right: 0;
   top: 50%;
   transform: translateY(-50%);
+}
+
+/*
+ * Desktop (dropdown) Navigation
+ */
+
+.desktop-nav {
+  display: none;
+}
+
+@media(min-width: 48rem) {
+  .desktop-nav {
+    display: block;
+  }
+}
+
+.dropdown-menu,
+.dropdown-menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.dropdown-menu a {
+  text-decoration: none;
+  padding: 5px 9px;
+}
+
+.dropdown-menu > li > ul {
+  left: -9999px;
+  position: absolute;
+  z-index: 1000000;
+  border: 1px solid #c4c7c8;
+  background-color: #fff;
+}
+
+/* Positions submenu items for when visible */
+.dropdown-menu ul.show-menu {
+  left: 0;
+}
+
+/* Positions right-most submenu item for when visible */
+.dropdown-menu > li:last-child ul.show-menu {
+  left: auto;
+  right: 0;
+}
+
+.dropdown-menu li {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  position: relative;
+}
+
+.dropdown-menu li a {
+  display: block;
 }
 
 

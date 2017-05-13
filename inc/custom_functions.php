@@ -83,8 +83,8 @@ if( !function_exists( 'k_navig_head' ) ) {
 	 * prints Main menu (drop-down)
 	 */
 	function k_navig_head() {
-		echo '<nav id="k-menu" class="k-main-navig" role="navigation">';
-		wp_nav_menu( array( 'menu_id' => 'drop-down-left', 'menu_class' => 'k-dropdown-menu', 'theme_location' => 'primary' ) );
+		echo '<nav id="navigation-desktop" class="desktop-nav" role="navigation">';
+		wp_nav_menu( array( 'menu_id' => 'drop-down-left', 'menu_class' => 'dropdown-menu', 'theme_location' => 'primary' ) );
 		echo '</nav>';
 	}
 }
