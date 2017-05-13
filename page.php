@@ -17,7 +17,9 @@
         <?php } ?>
 
         <h1 class="page-title">
-          <?php echo get_the_title($post->post_parent); ?> - 
+          <?php if( get_field('prefix_with_parent_page') == true ) { ?>
+            <?php echo get_the_title($post->post_parent); ?> - 
+          <?php } ?>
           <?php the_title(); ?>
         </h1>
 
