@@ -9,7 +9,11 @@
     </div><!-- content wrapper end -->
 
     <footer id="k-subfooter" class="site-footer  text-center  container"><!-- subfooter -->
-
+        <?php if (is_front_page()) : ?>
+            <?php if( !function_exists( 'dynamic_sidebar' ) || !dynamic_sidebar( __( 'Home Page Footer', 'kazaz' ) ) ) : ?>
+                <!-- footer widgets -->
+            <?php endif; ?>
+        <?php endif; ?>
         <?php if( vp_option( 'vpt_option.contact_form_id' ) ) : ?>
             <div id="contactus">
                 <?php echo do_shortcode( '[contact-form-7 id="' . vp_option( 'vpt_option.contact_form_id' ) . '" title="Contact form"]' ); ?>            

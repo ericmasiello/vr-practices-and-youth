@@ -13,7 +13,7 @@ function k_sidebars_init() {
 		'after_widget' => '</li>',
 		'before_title' => '<h2 class="title-widget">',
 		'after_title' => '</h2>',
-	) );
+	));
 
 	register_sidebar( array(
 		'name' => __( 'Header Widget', 'kazaz' ),
@@ -24,9 +24,9 @@ function k_sidebars_init() {
 		'after_widget' => '</li>',
 		'before_title' => '<h2 class="title-widget">',
 		'after_title' => '</h2>',
-	) );
+	));
 
-    register_sidebar( array(
+	register_sidebar( array(
 		'name' => __( 'Footer Widget', 'kazaz' ),
 		'id' => 'footer-widgets',
 		'class' => 'footer-widgets',
@@ -35,7 +35,14 @@ function k_sidebars_init() {
 		'after_widget' => '</li>',
 		'before_title' => '<h2 class="title-widget">',
 		'after_title' => '</h2>',
-	) );
+	));
+
+	register_sidebar( array(
+		'name' => __( 'Home Page Footer', 'kazaz' ),
+		'id' => 'news-widgets',
+		'class' => 'news-widgets',
+		'description' => __( 'Content: Home Page Footer', 'kazaz' ),
+	));
 	
 }
 add_action( 'widgets_init', 'k_sidebars_init' );
