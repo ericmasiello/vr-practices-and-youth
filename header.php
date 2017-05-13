@@ -30,37 +30,42 @@
     <span class="visible-md"></span>
     <span class="visible-lg"></span>
     <!-- device test end -->
-    
-    <div id="k-functional-wrap">
-        <?php 
-        // theme's functional navigation
-        if( has_nav_menu( 'functional' ) ) : k_navig_functional(); endif;
-        ?>
-    </div>
+
+    <?php include_once('inc/svgs.php'); ?>
     
     <header id="k-head" class="site-header" role="banner">
-        <?php if( function_exists( 'dynamic_sidebar' )) : ?>
-            <!-- header widgets -->
-            <?php dynamic_sidebar( __( 'Header Widget', 'kazaz' ) ) ?>
-        <?php endif; ?>
-        <h1 class="site-title">
-            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-                <?php bloginfo( 'name' ); ?>
-            </a>
-            <small class="site-title-tagline sr-only">
-                <?php bloginfo( 'description' ); ?>
-            </small>
-
-            <a id="mobile-nav-switch" href="#navigation-mobile" title="Navigation menu" aria-label="Navigation menu" role="button" aria-controls="navigation-mobile" aria-expanded="false">
+        <div class="container">
+            <?php
+            // theme's functional navigation
+            if( has_nav_menu( 'functional' ) ) : k_navig_functional(); endif;
+            ?>
+            <?php if( function_exists( 'dynamic_sidebar' )) : ?>
+                <!-- header widgets -->
+                <?php dynamic_sidebar( __( 'Header Widget', 'kazaz' ) ) ?>
+            <?php endif; ?>
+            <h1 class="site-title">
+                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+                    <?php bloginfo( 'name' ); ?>
+                </a>
+                <small class="site-title-tagline sr-only">
+                    <?php bloginfo( 'description' ); ?>
+                </small>
+            </h1>
+            <a
+                id="mobile-nav-switch"
+                href="#navigation-mobile"
+                title="Navigation menu"
+                aria-label="Navigation menu"
+                role="button"
+                aria-controls="navigation-mobile"
+                aria-expanded="false"
+            >
                 <span class="alter-menu-icon">Menu</span>
-            </a><!-- alternative menu button -->
-        </h1>
-        <?php
-            // theme's main navigation
-            if( has_nav_menu( 'primary' ) ) : k_navig_head(); endif;
-        ?>
+            </a>
+            <?php if( has_nav_menu( 'primary' ) ) : k_navig_head(); endif; ?>
+        </div>
     </header>
     
-    <div id="k-body" role="main"><!-- content wrapper -->
+    <div role="main"><!-- content wrapper -->
         <div class="container"><!-- container -->
         

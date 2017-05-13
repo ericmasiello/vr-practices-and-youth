@@ -1,20 +1,18 @@
 /*** DEFAULT COLORS/STYLES ***/
 /* Root menu */
 .k-dropdown-menu {
-    background: #c4c7c8;
 }
 /* Root links */
 .k-dropdown-menu a,
 .k-dropdown-menu a:link,
 .k-dropdown-menu a:visited {
     text-decoration: none;
-    color: #393939;
     padding: 5px 9px;
 }
 /* Root link hover */
 .k-dropdown-menu a:hover,
 .k-dropdown-menu li.dropdown-menu-hover > a {
-    color: #000;
+
 }
 /* Root menu item hover */
 .k-dropdown-menu li:hover,
@@ -34,19 +32,12 @@
 
 /* Optional submenu drop shadow */
 .dropdown-menu-shadow {
-    -webkit-box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.3);
-    -ms-box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.3);
-    -o-box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.3);
     box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.3);
 }
 
 /*** ESSENTIAL STYLES ***/
 .k-dropdown-menu {
     display: inline-block;
-    /* IE7 inline-block fix */
-    *display: inline;
-    *zoom: 1;
 }
 .k-dropdown-menu,
 .k-dropdown-menu ul {
@@ -55,39 +46,35 @@
     list-style: none;
 }
 .k-dropdown-menu ul {
-    /*display: none;*/
-		left: -9999px;
+    left: -9999px;
     position: absolute;
     z-index: 1000000;
 }
 
 .k-dropdown-menu ul.show-menu {
-
-	left: 0;
+    left: 0;
 }
 
 .k-dropdown-menu > li:last-child ul.show-menu {
-
-	left: auto;
-	right: 0;
+    left: auto;
+    right: 0;
 }
 
 .k-dropdown-menu ul ul {
     position: static;
 }
+
 .k-dropdown-menu li {
     margin: 0;
     padding: 0;
     display: inline-block;
-	position: relative;
-    /* IE7 inline-block and padding fix */
-    *display: inline;
-    *zoom: 1;
-    *vertical-align: bottom;
+    position: relative;
 }
+
 .k-dropdown-menu li a {
     display: block;
 }
+
 .k-dropdown-menu ul li {
     position: relative;
     display: block;
@@ -109,11 +96,8 @@ span.dropdown-menu-sub-indicator {
     overflow: hidden;
     /* IE7 image replacement fix */
     *text-indent: -9999px;
-    /* IE7 inline-block fix */
-    *display: inline;
-    *zoom: 1;
-    *vertical-align: middle;
 }
+
 span.dropdown-menu-sub-indicator:before {
     /* Image replacement */
     content: "";
@@ -142,9 +126,6 @@ span.dropdown-menu-sub-indicator:before {
 .dropdown-menu-vertical li {
     display: block;
     position: relative;
-    /* IE7 fix */
-    *float: left;
-    *width: 100%;
 }
 .dropdown-menu-vertical span.dropdown-menu-sub-indicator {
     background-position: 0 0;
