@@ -10,6 +10,12 @@
 
     <footer id="k-subfooter" class="site-footer  text-center  container"><!-- subfooter -->
 
+        <?php if( vp_option( 'vpt_option.contact_form_id' ) ) : ?>
+            <div id="contactus">
+                <?php echo do_shortcode( '[contact-form-7 id="' . vp_option( 'vpt_option.contact_form_id' ) . '" title="Contact form"]' ); ?>            
+            </div>
+        <?php endif; ?>
+
         <ul class="footer-widgets">
             <?php if( !function_exists( 'dynamic_sidebar' ) || !dynamic_sidebar( __( 'Footer Widget', 'kazaz' ) ) ) : ?>
             <!-- footer widgets -->
