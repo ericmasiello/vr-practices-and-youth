@@ -22,7 +22,7 @@ get_header();
 
         <?php if( has_post_thumbnail() ) { ?>
 
-                    <figure class="news-featured-image">
+                    <figure class="featured-image">
                         <?php the_post_thumbnail(); ?>
                     </figure>
 
@@ -31,7 +31,7 @@ get_header();
         <h1 class="page-title"><?php the_title(); ?></h1>
 
 
-        <div class="news-body  clearfix">
+        <div class="content  clearfix">
           <?php the_content(); ?>
         </div>
 

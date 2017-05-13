@@ -10,7 +10,7 @@
   
     <?php if( has_post_thumbnail() && !post_password_required() && !is_attachment() ) : ?>
     
-      <figure class="news-featured-image">
+      <figure class="featured-image">
         <?php the_post_thumbnail(); ?>
       </figure>
       
@@ -22,7 +22,7 @@
       
       <?php k_post_meta(); // print date, author and comments number ?>
       
-      <div class="news-body">
+      <div class="content">
         <?php if( has_excerpt() ) : ?><div class="call-out"><?php the_excerpt(); ?></div><?php endif; ?>
         <?php the_content(); // full content ?>
       </div>
@@ -39,7 +39,7 @@
   
     <?php if( has_post_thumbnail() && !post_password_required() && !is_attachment() ) : ?>
     
-      <figure class="news-featured-image">
+      <figure class="featured-image">
         <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute( array( 'before' => 'Permalink to: ', 'after' => '' ) ); ?>"><?php the_post_thumbnail(); ?></a>
       </figure>
       
@@ -70,7 +70,7 @@
     <div class="col-padded">
       <?php if( has_post_thumbnail() && !post_password_required() && !is_attachment() ) : ?>
 
-        <figure class="news-featured-image">
+        <figure class="featured-image">
           <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute( array( 'before' => 'Permalink to: ', 'after' => '' ) ); ?>"><?php the_post_thumbnail(); ?></a>
         </figure>
 

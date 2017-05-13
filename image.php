@@ -15,7 +15,7 @@ get_header();
         
         <div class="col-padded"><!-- inner custom column -->
         
-            <figure class="news-featured-image">
+            <figure class="featured-image">
                 <?php k_attached_image(); ?>
             </figure>
             

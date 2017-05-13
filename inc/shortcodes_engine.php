@@ -434,7 +434,7 @@ function sc_blog( $atts, $content = NULL ) {
 		
 			if( has_post_thumbnail() && !post_password_required() && !is_attachment() ) : 
 			
-		    $output .= '<figure class="news-featured-image">';
+		    $output .= '<figure class="featured-image">';
 			    $output .= '<a href="' . get_permalink() . '" title="' . the_title_attribute( 'echo=0' ) . '">' . get_the_post_thumbnail( get_the_ID(), 'full' ) . '</a>';
 		    $output .= '</figure>';
 		    

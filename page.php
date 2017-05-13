@@ -11,7 +11,7 @@
       <?php while( have_posts() ) : the_post(); ?>
         
         <?php if( has_post_thumbnail() ) { ?>
-          <figure class="news-featured-image">
+          <figure class="featured-image">
             <?php the_post_thumbnail(); ?>
           </figure>
         <?php } ?>
@@ -23,7 +23,7 @@
           <?php the_title(); ?>
         </h1>
 
-        <div class="news-body  clearfix">
+        <div class="content  clearfix">
           <?php the_content(); ?>
         </div>
         <?php k_paging(); ?>

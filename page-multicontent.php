@@ -8,7 +8,7 @@
 <div id="post-<?php the_ID(); ?>" <?php post_class( 'col-padded' ); ?>><!-- inner custom column -->
     <?php while( have_posts() ) : the_post(); ?>
         <?php if( has_post_thumbnail() ) { ?>
-            <figure class="news-featured-image">
+            <figure class="featured-image">
                 <?php the_post_thumbnail(); ?>
             </figure>
         <?php } ?>
@@ -19,24 +19,26 @@
             <h1 class="page-title  sr-only"><?php the_title(); ?></h1>
         <?php } ?>
 
-        <div class="news-body">
+        <div class="content center">
             <?php the_content(); ?>
         </div>
 
-        <section>
+        <hr />
+
+        <section class="featured">
             <div>
-                <?php if(get_field('column-one')){ //if the field is not empty
-                    echo get_field('column-one'); //display it
+                <?php if(get_field('column-one')) {
+                    echo get_field('column-one');
                 } ?>
             </div>
             <div>
-                <?php if(get_field('resources')){ //if the field is not empty
-                    echo get_field('resources'); //display it
+                <?php if(get_field('resources')) {
+                    echo get_field('resources');
                 } ?>
             </div>
             <div>
-                <?php if(get_field('training_&_ta')){ //if the field is not empty
-                    echo get_field('training_&_ta'); //display it
+                <?php if(get_field('training_&_ta')) {
+                    echo get_field('training_&_ta');
                 } ?>
             </div>
         </section>

@@ -33,7 +33,7 @@ if( $sidebar_pos == 'left' ) $sidebar_class = ' col-lg-push-4 col-md-push-4';
             
             <?php if( has_post_thumbnail() ) { ?>
             
-              <figure class="news-featured-image">
+              <figure class="featured-image">
                 <?php the_post_thumbnail(); ?>
               </figure>
               
@@ -41,7 +41,7 @@ if( $sidebar_pos == 'left' ) $sidebar_class = ' col-lg-push-4 col-md-push-4';
             
             <h1 class="page-title"><?php the_title(); ?></h1>
             
-            <div class="news-body">
+            <div class="content">
               <?php the_content(); ?>
             </div>
         
@@ -85,7 +85,7 @@ if( $sidebar_pos == 'left' ) $sidebar_class = ' col-lg-push-4 col-md-push-4';
           
             <?php if( has_post_thumbnail() && !post_password_required() && !is_attachment() ) : ?>
             
-              <figure class="news-featured-image">
+              <figure class="featured-image">
                 <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute( array( 'before' => 'Permalink to: ', 'after' => '' ) ); ?>"><?php the_post_thumbnail(); ?></a>
               </figure>
               
@@ -115,7 +115,7 @@ if( $sidebar_pos == 'left' ) $sidebar_class = ' col-lg-push-4 col-md-push-4';
           
             <?php if( has_post_thumbnail() && !post_password_required() && !is_attachment() ) : ?>
             
-              <figure class="news-featured-image">
+              <figure class="featured-image">
                 <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute( array( 'before' => 'Permalink to: ', 'after' => '' ) ); ?>"><?php the_post_thumbnail(); ?></a>
               </figure>
               

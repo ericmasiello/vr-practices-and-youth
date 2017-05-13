@@ -25,18 +25,12 @@ html {
   box-sizing: inherit;
 }
 
-@media only screen and (min-width: 75rem) {
-  html {
-    font-size: 20px;
-  }
-}
-
 /* == font and links == */
 body {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 1em;
   font-weight: 300;
-  line-height: 1.5em;
+  line-height: 1.5;
   color: #444545;
   margin: 0;
   padding-top: 1.875rem;
@@ -74,6 +68,12 @@ blockquote p {
   font-style: italic;
 }
 
+hr {
+  border: 0;
+  border-top: 1px solid;
+  color: #94A7BD;
+}
+
 h1, .h1,
 h2, .h2,
 h3, .h3 {
@@ -93,6 +93,7 @@ h2, .h2 {
   line-height: 1.5;
   padding: 20px 0px 5px 0px;
   text-transform: uppercase;
+  margin: 0;
 }
 
 h3, .h3, .lead {
@@ -211,9 +212,40 @@ img.alignleft, img.aligncenter, img.alignright {
  */
 
 .container {
-  max-width: 68.75rem;
+  max-width: 65.5rem;
   margin: auto;
   padding: 0 0.625rem;
+}
+
+@media (min-width: 48rem) {
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+/*
+ * Featured
+ */
+
+.featured {
+  display: flex;
+}
+
+.featured > div {
+  text-align: center;
+  flex: 1;
+  flex-basis: 33.33333%;
+}
+
+.featured a {
+  color: #AD0737;
+}
+
+.iconimage {
+  fill: currentColor;
+  max-width: 4rem;
+  max-height: 4rem;
 }
 
 /*
@@ -247,20 +279,6 @@ img.alignleft, img.aligncenter, img.alignright {
   .site-title > a[rel="home"] {
     height: 55px;
     width: 200px;
-  }
-}
-
-@media only screen and (min-width: 65em) {
-  .site-title > a[rel="home"] {
-    height: 60px;
-    width: 225px;
-  }
-}
-
-@media only screen and (min-width: 75em) {
-  .site-title > a[rel="home"] {
-    height: 76px;
-    width: 285px;
   }
 }
 
@@ -381,6 +399,7 @@ img.alignleft, img.aligncenter, img.alignright {
 .desktop-nav {
   display: none;
   margin-top: 1rem;
+  margin-bottom: 3.5rem;
 }
 
 @media(min-width: 48rem) {
@@ -398,7 +417,20 @@ img.alignleft, img.aligncenter, img.alignright {
 
 .dropdown-menu a {
   text-decoration: none;
-  padding: 0.5rem;
+  padding: 0.5625rem 0.5rem 0.4375rem;
+}
+
+.dropdown-menu > li {
+  flex: 0;
+}
+
+.dropdown-menu > li:last-child a {
+  background-color: #AD0737;
+  color: #fff;
+}
+
+.dropdown-menu > li > a {
+  white-space: nowrap;
 }
 
 .dropdown-menu > li > ul {
@@ -453,6 +485,37 @@ img.alignleft, img.aligncenter, img.alignright {
   border-bottom: 0;
 }
 
+/*
+ * Skip Nav
+ */
+
+#skip-navigation {
+  padding: 1em;
+  position: absolute;
+  top: -20em;
+  left: 1em;
+  z-index: 1000;
+  transition: top .3s ease-in-out;
+}
+
+#skip-navigation:focus {
+  position: absolute;
+  top: 20px;
+  background: #FFF;
+}
+
+/*
+ * Hide text
+ */
+
+.a11y-text-hide {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
 
 /*
  * Utility Classes
@@ -484,34 +547,18 @@ img.alignleft, img.aligncenter, img.alignright {
   clip: auto;
 }
 
-/*
- * Skip Nav
- */
-
-#skip-navigation {
-  padding: 1em;
-  position: absolute;
-  top: -20em;
-  left: 1em;
-  z-index: 1000;
-  transition: top .3s ease-in-out;
-}
-
-#skip-navigation:focus {
-  position: absolute;
-  top: 20px;
-  background: #FFF;
+.center {
+  text-align: center;
 }
 
 /*
- * Hide text
+ * Home Page
  */
 
-.a11y-text-hide {
-  position: absolute;
-  left: -10000px;
-  top: auto;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
+.home .content > h2:first-of-type {
+  font-size: 2rem;
+}
+
+.home .content p {
+  font-size: 1.25rem;
 }
