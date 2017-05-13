@@ -20,33 +20,52 @@ Version: 1.0.0
 /* ================================================== COMMON STYLES */
 
 html {
-
   font-size: 16px;
 }
 
-@media only screen and (min-width: 75em) {
-
+@media only screen and (min-width: 75rem) {
   html {
-
     font-size: 20px;
   }
 }
 
 /* == font and links == */
 body {
-
-  font-family: 'Source Sans Pro', Verdana, Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   font-size: 1em;
   line-height: 1.5em;
-  color: #353535;
-  -ms-word-wrap: break-word;
-  word-wrap: break-word;
+  color: #444545;
 }
-a { -webkit-transition: 0.2s ease-in-out all; -moz-transition: 0.2s ease-in-out all; -o-transition: 0.2s ease-in-out all; transition: 0.2s ease-in-out all; }
+
+p {
+	color: #58595B;
+	padding-bottom: 20px;
+}
+
+strong {
+	font-weight: bold;
+}
+
+em {
+	font-style: italic;
+}
+
+a {
+	color: #025380;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #1B75BC;
+}
+
 /* == END font and links == */
 
 /* == blockquotes == */
-blockquote, blockquote p { font-size: 18px; font-style: italic; }
+blockquote, blockquote p {
+  font-size: 1.125rem;
+  font-style: italic;
+}
 /* == END blockquotes == */
 
 /* == titles, titles custom == */
@@ -54,18 +73,35 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 { font-weight: 700; }
 h1, h2, h3, .h1, .h2, .h3 { margin: 40px 0 20px;}
 h4, h5, h6, .h4, .h5, .h6 { margin: 40px 0 10px;}
 
+h1, .h1,
+h2, .h2,
+h3, .h3 {
+  font-family: 'Fjalla One', sans-serif;
+}
+
 h1, .h1 {
-  font-size: 28px;
-  font-size: 1.75rem;
+  color: #444545;
+  font-size: 2.5rem;
+  line-height: 1.5em;
+  padding: 5px 0px 15px 0px;
+  text-transform: uppercase;
 }
+
 h2, .h2 {
-  font-size: 24px;
-  font-size: 1.5rem;
+  font-size: 1.75rem;
+  line-height: 1.5;
+  padding: 20px 0px 5px 0px;
+  text-transform: uppercase;
 }
+
 h3, .h3, .lead {
-  font-size: 22px;
-  font-size: 1.375rem;
+  font-size: 1.25rem;
+  line-height: 1.3;
+  padding: 20px 0px 5px 0px;
+  color: #58595B;
+  font-weight: 400;
 }
+
 h4, .h4 {
   font-size: 20px;
   font-size: 1.25rem;
@@ -76,7 +112,6 @@ h5, .h5 {
 }
 
 h6, .h6, #reply-title {
-
   font-size: 16px;
   font-size: 1rem;
   text-transform: uppercase;
@@ -84,10 +119,16 @@ h6, .h6, #reply-title {
 
 #reply-title { margin-top: 0; }
 
-h1 > i, h2 > i, h3 > i, h4 > i, h5 > i, h6 > i { margin-right: 10px; }
+h1 > i,
+h2 > i,
+h3 > i,
+h4 > i,
+h5 > i,
+h6 > i {
+  margin-right: 0.625rem;
+}
 
 .page-title {
-  font-size: 28px;
   font-size: 1.75rem;
   font-weight: 700;
   line-height: 1.2857142857em;
