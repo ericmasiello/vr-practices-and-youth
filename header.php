@@ -38,35 +38,29 @@
         ?>
     </div>
     
-    <header id="k-head" class="container  site-header" role="banner"><!-- container + head wrapper -->
+    <header id="k-head" class="site-header" role="banner">
         <?php if( function_exists( 'dynamic_sidebar' )) : ?>
             <!-- header widgets -->
             <?php dynamic_sidebar( __( 'Header Widget', 'kazaz' ) ) ?>
         <?php endif; ?>
-        <div class="row  col-padded">
-            <h1 class="site-title  col-xs-12  col-sm-4">
-                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-                    <?php bloginfo( 'name' ); ?>
-                </a>
-                <small class="site-title-tagline sr-only"><?php bloginfo( 'description' ); ?></small>
+        <h1 class="site-title">
+            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+                <?php bloginfo( 'name' ); ?>
+            </a>
+            <small class="site-title-tagline sr-only">
+                <?php bloginfo( 'description' ); ?>
+            </small>
 
-
-                <a id="mobile-nav-switch" href="#navigation-mobile" title="Navigation menu"
-                        aria-label="Navigation menu" role="button" aria-controls="navigation-mobile" aria-expanded="false">
-                        <span class="alter-menu-icon">Menu</span>
-                    </a><!-- alternative menu button -->
-
-            </h1>
-            <div class="col-xs-12 col-sm-8 end-sm">
-                <?php
-                    // theme's main navigation
-                    if( has_nav_menu( 'primary' ) ) : k_navig_head(); endif;
-                ?>
-            </div>
-        </div>
-    </header><!-- container + head wrapper end -->
+            <a id="mobile-nav-switch" href="#navigation-mobile" title="Navigation menu" aria-label="Navigation menu" role="button" aria-controls="navigation-mobile" aria-expanded="false">
+                <span class="alter-menu-icon">Menu</span>
+            </a><!-- alternative menu button -->
+        </h1>
+        <?php
+            // theme's main navigation
+            if( has_nav_menu( 'primary' ) ) : k_navig_head(); endif;
+        ?>
+    </header>
     
     <div id="k-body" role="main"><!-- content wrapper -->
-    
         <div class="container"><!-- container -->
         
