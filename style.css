@@ -35,6 +35,7 @@ html {
 body {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 1em;
+  font-weight: 300;
   line-height: 1.5em;
   color: #444545;
   margin: 0;
@@ -321,11 +322,11 @@ img.alignleft, img.aligncenter, img.alignright {
 @media(min-width: 48rem) {
   .menu-primary-menu-container > ul {
     display: flex;
+    justify-content: flex-end;
   }
 }
 
 .menu-primary-menu-container a {
-  border-bottom: 1px solid #eee;
   display: block;
   position: relative;
   text-decoration: none;
@@ -339,10 +340,6 @@ img.alignleft, img.aligncenter, img.alignright {
 .menu-primary-menu-container ul ul ul a {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 1rem;
-}
-
-.menu-primary-menu-container a:hover {
-  background-color: #eee
 }
 
 .sub-menu {
@@ -383,6 +380,7 @@ img.alignleft, img.aligncenter, img.alignright {
 
 .desktop-nav {
   display: none;
+  margin-top: 1rem;
 }
 
 @media(min-width: 48rem) {
@@ -400,15 +398,17 @@ img.alignleft, img.aligncenter, img.alignright {
 
 .dropdown-menu a {
   text-decoration: none;
-  padding: 5px 9px;
+  padding: 0.5rem;
 }
 
 .dropdown-menu > li > ul {
   left: -9999px;
   position: absolute;
   z-index: 1000000;
-  border: 1px solid #c4c7c8;
+  width: 25rem;  
   background-color: #fff;
+  padding-top: 0.5rem;
+  box-shadow: 0 0.375rem 0.75rem rgba(0, 0, 0, 0.175);
 }
 
 /* Positions submenu items for when visible */
@@ -424,13 +424,33 @@ img.alignleft, img.aligncenter, img.alignright {
 
 .dropdown-menu li {
   margin: 0;
-  padding: 0;
-  display: inline-block;
+  padding: 0 0.5rem;
   position: relative;
 }
 
 .dropdown-menu li a {
-  display: block;
+  display: inline-block;
+}
+
+.dropdown-menu li li {
+  padding-bottom: 0.75rem;
+}
+
+.dropdown-menu li li li {
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 2rem;
+}
+
+.dropdown-menu li li li a {
+  font-size: 0.875rem;
+  padding-left: 0;
+  border-bottom: 1px solid #94A7BD;
+}
+
+.dropdown-menu li li li:last-child a {  
+  padding-bottom: 0;
+  border-bottom: 0;
 }
 
 
