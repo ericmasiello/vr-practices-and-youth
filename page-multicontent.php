@@ -39,6 +39,7 @@
             </div>
         </section>
         <?php k_paging(); ?>
+        <hr />
     <?php endwhile; ?>
 </div><!-- inner custom column end -->
 <?php get_footer(); ?>
