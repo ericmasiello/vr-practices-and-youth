@@ -38,7 +38,8 @@ body {
 
 p {
 	color: #58595B;
-	padding-bottom: 20px;
+  margin-top: 0.5rem;
+	margin-bottom: 1.25rem;
 }
 
 strong {
@@ -75,46 +76,43 @@ hr {
 }
 
 h1, .h1,
-h2, .h2,
-h3, .h3 {
+h2, .h2 {
   font-family: 'Fjalla One', sans-serif;
+  font-weight: 200;
 }
 
 h1, .h1 {
   color: #444545;
   font-size: 2.5rem;
-  line-height: 1.5em;
-  padding: 5px 0px 15px 0px;
+  line-height: 1.5;
+  margin: 0.5rem 0 1rem 0;
   text-transform: uppercase;
 }
 
-h2, .h2 {
+h2, .h2, .rpwe-title {
   font-size: 1.75rem;
   line-height: 1.5;
-  padding: 20px 0px 5px 0px;
+  margin: 1.25rem 0 0.5rem;
   text-transform: uppercase;
-  margin: 0;
 }
 
 h3, .h3, .lead {
   font-size: 1.25rem;
   line-height: 1.3;
-  padding: 20px 0px 5px 0px;
+  margin: 1.25rem 0 0.5rem;
   color: #58595B;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 h4, .h4 {
-  font-size: 20px;
   font-size: 1.25rem;
 }
+
 h5, .h5 {
-  font-size: 18px;
   font-size: 1.125rem;
 }
 
 h6, .h6, #reply-title {
-  font-size: 16px;
   font-size: 1rem;
   text-transform: uppercase;
 }
@@ -133,13 +131,8 @@ h6 > i {
 }
 
 .page-title {
-  font-size: 1.75rem;
-  font-weight: 700;
-  line-height: 1.2857142857em;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-bottom: 15px;
-  padding-bottom: 0.9375rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #94A7BD;
 }
 
 figure {
@@ -154,13 +147,13 @@ img {
 img.alignleft,
 .alignleft {
   float: left;
-  margin-right: 20px;
+  margin-right: 1.125rem;
 }
 
 img.alignright,
 .alignright {
   float: right;
-  margin-left: 20px;
+  margin-left: 1.125rem;
 }
 
 img.aligncenter,
@@ -180,7 +173,7 @@ img.alignright,
 }
 
 img.alignleft, img.aligncenter, img.alignright {
-  margin-bottom: 5px;
+  margin-bottom: 0.5rem;
 }
 
 .wp-caption {
@@ -188,10 +181,10 @@ img.alignleft, img.aligncenter, img.alignright {
 }
 
 .wp-caption-text {
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 400;
-  line-height: 18px;
-  margin: 10px 0 !important;
+  line-height: 1.5;
+  margin: 0.75rem 0 !important;
   font-style: italic;
 }
 
@@ -225,6 +218,21 @@ img.alignleft, img.aligncenter, img.alignright {
 }
 
 /*
+ * Hero
+ */
+.hero {
+  height: 12rem;
+  background-image: url('public/img/hero-default.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Used for hero images that have a featured image set in the post/page */
+.hero-image {
+  height: 23rem;
+}
+
+/*
  * Featured
  */
 
@@ -236,6 +244,7 @@ img.alignleft, img.aligncenter, img.alignright {
   text-align: center;
   flex: 1;
   flex-basis: 33.33333%;
+  padding: 1rem;
 }
 
 .featured a {
@@ -246,6 +255,11 @@ img.alignleft, img.aligncenter, img.alignright {
   fill: currentColor;
   max-width: 4rem;
   max-height: 4rem;
+}
+
+.featured h2 + p {
+  margin-top: 0;
+  padding-bottom: 0;
 }
 
 /*
@@ -483,6 +497,32 @@ img.alignleft, img.aligncenter, img.alignright {
 .dropdown-menu li li li:last-child a {  
   padding-bottom: 0;
   border-bottom: 0;
+}
+
+/*
+ * Homepage Latest News
+ */
+.rpwe-ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.rpwe-li {
+  text-align: center;
+  flex: 1;
+  flex-basis: 33.33333%;
+  padding: 1rem;
+}
+
+.rpwe-img {
+  display: block;
+}
+
+.rpwe-img img {
+  display: block;
+  margin: auto;
 }
 
 /*
