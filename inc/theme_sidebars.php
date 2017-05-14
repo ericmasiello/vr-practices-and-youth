@@ -40,6 +40,8 @@ function k_sidebars_init() {
         'id' => 'news-widgets',
         'class' => 'news-widgets',
         'description' => __( 'Content: Home Page Footer', 'kazaz' ),
+        'before_widget' => '',
+        'after_widget' => '',
     ));
     
 }
