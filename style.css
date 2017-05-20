@@ -60,8 +60,8 @@ input[type="reset"] {
   padding: 0.5em;
   border: none;
   color: #AD0737;
-  font-family: 'Fjalla One', sans-serif;
   font-size: 1.125rem;
+  cursor: pointer;
 }
 
 p {
@@ -262,8 +262,10 @@ img.alignleft, img.aligncenter, img.alignright {
  * Featured
  */
 
-.featured {
-  display: flex;
+@media(min-width: 48rem) {
+  .featured {
+    display: flex;
+  }
 }
 
 .featured > div {
@@ -338,10 +340,6 @@ img.alignleft, img.aligncenter, img.alignright {
     display: none;
     position: absolute;
   }
-}
-
-#mobile-nav-switch:focus {
-  outline: none;
 }
 
 .alter-menu-icon {
@@ -533,7 +531,12 @@ img.alignleft, img.aligncenter, img.alignright {
   margin: 0;
   padding: 0;
   list-style: none;
-  display: flex;
+}
+
+@media(min-width: 48rem) {
+  .rpwe-ul {
+    display: flex;
+  }
 }
 
 .rpwe-li {
@@ -605,7 +608,8 @@ img.alignleft, img.aligncenter, img.alignright {
   text-align: right;
 }
 
-.footer-contact-form [type=submit] {
+.footer-contact-form [type="submit"] {
+  font-family: 'Fjalla One', sans-serif;
   box-shadow: 0.25em 0.25em 0.25em rgba(0, 0, 0, 0.5);
   width: 100%;
 }
@@ -625,6 +629,55 @@ img.alignleft, img.aligncenter, img.alignright {
 .footer-contact-form__instructions {
   font-size: 1.125rem;
   font-size: 1.4;
+}
+
+/*
+ * Footer Widgets
+ */
+
+.footer-widgets {
+  margin-top: 3rem;
+}
+
+/*
+ * Constant Contact Form
+ */
+
+.widget_sf_widget_constantcontact {
+  text-align: center;
+}
+
+.widget_sf_widget_constantcontact form {
+  display: flex;
+  justify-content: center;
+}
+
+.widget_sf_widget_constantcontact .form-control {
+  max-width: 24rem;
+}
+
+.widget_sf_widget_constantcontact [type="submit"] {
+  background-color: #AD0737;
+  color: #fff;
+  transition: background-color 0.5s;
+}
+
+.widget_sf_widget_constantcontact [type="submit"]:hover {
+  background-color: #C7315C;
+}
+
+[role="contentinfo"] {
+  margin-top: 3.5rem;
+}
+
+/*
+ * Footer Message
+ */
+
+.footer-message {
+  margin-top: 2.5rem;
+  font-size: 0.875rem;
+  text-align: center;
 }
 
 /*

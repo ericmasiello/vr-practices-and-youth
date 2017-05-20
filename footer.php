@@ -13,11 +13,11 @@
         <?php endif; ?>
         <?php include_once('inc/footer_contact_form.php'); ?>
 
-        <ul class="footer-widgets">
+        <div class="footer-widgets">
             <?php if( !function_exists( 'dynamic_sidebar' ) || !dynamic_sidebar( __( 'Footer Widget', 'kazaz' ) ) ) : ?>
             <!-- footer widgets -->
             <?php endif; ?>
-        </ul>
+        </div>
     </div>
     
     <div role="contentinfo" class="container">
@@ -30,7 +30,9 @@
         <?php endif; ?>
 
         <?php if( vp_option( 'vpt_option.footer_message' ) ) : ?>
-            <small><?php echo vp_option( 'vpt_option.footer_message' ); ?></small>
+            <div class="footer-message">
+                <?php echo vp_option( 'vpt_option.footer_message' ); ?>
+            </div>
         <?php endif; ?>
     </div>
 </footer>
