@@ -11,11 +11,7 @@
         <?php if (is_front_page()) : ?>
             <?php if( !function_exists( 'dynamic_sidebar' ) || !dynamic_sidebar( __( 'Home Page Footer', 'kazaz' ) ) ) : ?><?php endif; ?>
         <?php endif; ?>
-        <?php if( vp_option( 'vpt_option.contact_form_id' ) ) : ?>
-            <div id="contactus">
-                <?php echo do_shortcode( '[contact-form-7 id="' . vp_option( 'vpt_option.contact_form_id' ) . '" title="Contact form"]' ); ?>            
-            </div>
-        <?php endif; ?>
+        <?php include_once('inc/footer_contact_form.php'); ?>
 
         <ul class="footer-widgets">
             <?php if( !function_exists( 'dynamic_sidebar' ) || !dynamic_sidebar( __( 'Footer Widget', 'kazaz' ) ) ) : ?>

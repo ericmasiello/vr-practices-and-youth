@@ -167,6 +167,26 @@ return array(
 
                 array(
                     'type' => 'section',
+                    'title' => __('Footer Contact Form', 'kazaz'),
+                    'name' => 'footer_contact_form',
+                    'fields' => array(
+                        array(
+                            'type' => 'textbox',
+                            'name' => 'footer_contact_title',
+                            'label' => __('Form Title', 'kazaz'),
+                            'default' => __('', 'kazaz'),
+                        ),
+                        array(
+                            'type' => 'textbox',
+                            'name' => 'footer_contact_instructions',
+                            'label' => __('Form Instructions', 'kazaz'),
+                            'default' => __('', 'kazaz'),
+                        )
+                    )
+                ),
+
+                array(
+                    'type' => 'section',
                     'title' => __('Footer Message', 'kazaz'),
                     'name' => 'footer_extra',
                     'description' => __('Enter a message you would like to have appear in the footer of your site', 'kazaz'),
