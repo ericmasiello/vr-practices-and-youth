@@ -57,6 +57,7 @@ input[type="submit"],
 input[type="button"],
 input[type="reset"] {
   background-color: white;
+  border-radius: 3px;
   padding: 0.5em;
   border: none;
   color: #AD0737;
@@ -464,6 +465,7 @@ img.alignleft, img.aligncenter, img.alignright {
 
 .dropdown-menu > li:last-child a {
   background-color: #AD0737;
+  border-radius: 3px;
   color: #fff;
 }
 
@@ -479,6 +481,7 @@ img.alignleft, img.aligncenter, img.alignright {
   background-color: #fff;
   padding-top: 0.5rem;
   box-shadow: 0 0.375rem 0.75rem rgba(0, 0, 0, 0.175);
+  border-radius: 0 0 3px 3px;
 }
 
 /* Positions submenu items for when visible */
@@ -561,6 +564,7 @@ img.alignleft, img.aligncenter, img.alignright {
 
 .footer-contact-form {
   background-color: #025380;
+  border-radius: 3px;
   color: #fff;
   padding: 1.25rem 1.25rem;
 }
@@ -569,6 +573,10 @@ img.alignleft, img.aligncenter, img.alignright {
   .footer-contact-form__header,
   .footer-contact-form form {
     display: flex;
+  }
+
+  .footer-contact-form__header {
+    align-items: center;
   }
 
   .footer-contact-form__header > :first-child,
@@ -610,7 +618,8 @@ img.alignleft, img.aligncenter, img.alignright {
 
 .footer-contact-form [type="submit"] {
   font-family: 'Fjalla One', sans-serif;
-  box-shadow: 0.25em 0.25em 0.25em rgba(0, 0, 0, 0.5);
+  padding-left: 1em;
+  padding-right: 1em;
   width: 100%;
 }
 
@@ -654,9 +663,12 @@ img.alignleft, img.aligncenter, img.alignright {
 
 .widget_sf_widget_constantcontact .form-control {
   max-width: 24rem;
+  border-radius: 3px 0 0 3px;
+  border-right-width: 0;
 }
 
 .widget_sf_widget_constantcontact [type="submit"] {
+  border-radius: 0 3px 3px 0;
   background-color: #AD0737;
   color: #fff;
   transition: background-color 0.5s;
