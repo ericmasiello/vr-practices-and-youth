@@ -119,8 +119,13 @@ h1, .h1 {
 h2, .h2, .rpwe-title {
   font-size: 1.75rem;
   line-height: 1.3;
-  margin: 1.25rem 0 0.5rem;
+  margin: 2rem 0 0.5rem;
   text-transform: uppercase;
+}
+
+h2:first-child,
+.h2:first-child {
+  margin-top: 1.25rem;
 }
 
 h3, .h3, .lead {
@@ -231,14 +236,14 @@ img.alignleft, img.aligncenter, img.alignright {
  * Container
  */
 
-.container {
+.page-container {
   max-width: 65.5rem;
   margin: auto;
   padding: 0 0.625rem;
 }
 
 @media (min-width: 56rem) {
-  .container {
+  .page-container {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }

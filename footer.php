@@ -3,11 +3,11 @@
  * Theme Footer
  */
 ?>
-    </div><!-- /.container -->
+    </div><!-- /.page-container -->
 </div><!-- /[role=main] -->
 
 <footer>
-    <div class="container">
+    <div class="page-container">
         <?php if (is_front_page()) : ?>
             <?php if( !function_exists( 'dynamic_sidebar' ) || !dynamic_sidebar( __( 'Home Page Footer', 'kazaz' ) ) ) : ?><?php endif; ?>
         <?php endif; ?>
@@ -20,7 +20,7 @@
         </div>
     </div>
     
-    <div role="contentinfo" class="container">
+    <div role="contentinfo" class="page-container">
         <?php if( vp_option( 'vpt_option.footer_logo' ) ) : ?>
             <img
                 src="<?php echo vp_option( 'vpt_option.footer_logo' ); ?>"

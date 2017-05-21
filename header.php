@@ -34,7 +34,7 @@
     <?php include_once('inc/svgs.php'); ?>
     
     <header class="site-header" role="banner">
-        <div class="container">
+        <div class="page-container">
             <?php
             // theme's functional navigation
             if( has_nav_menu( 'functional' ) ) : k_navig_functional(); endif;
@@ -69,5 +69,5 @@
     </header>
     
     <div role="main"><!-- content wrapper -->
-        <div class="container"><!-- container -->
+        <div class="page-container"><!-- page-container -->
         
