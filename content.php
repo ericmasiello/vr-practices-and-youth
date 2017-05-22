@@ -67,7 +67,7 @@
 
   <div id="post-<?php the_ID(); ?>" <?php post_class( 'news-stacked col-xs-12' ); ?>><!-- news wrap -->
 
-    <div class="col-padded">
+    <div>
       <?php if( has_post_thumbnail() && !post_password_required() && !is_attachment() ) : ?>
 
         <figure class="featured-image">
@@ -99,7 +99,7 @@
 
   <div id="post-<?php the_ID(); ?>" <?php post_class( 'news-stacked col-xs-12' ); ?>><!-- content wrap -->
 
-    <div class="col-padded">
+    <div>
 
       <h1 class="page-title">
         <a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute( array( 'before' => 'Permalink to: ', 'after' => '' ) ); ?>"><?php the_title(); ?></a>

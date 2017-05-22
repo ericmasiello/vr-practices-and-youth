@@ -6,7 +6,7 @@
 
 <div class="col-lg-12">
 
-  <div class="col-padded">
+  <div>
 
     <?php if( vp_option( 'vpt_option.404_image' ) ) : ?>
     <figure class="thumb-404">

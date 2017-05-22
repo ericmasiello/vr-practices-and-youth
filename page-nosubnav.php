@@ -13,7 +13,7 @@ get_header();
 
         <div class="col-lg-12 col-md-12"><!-- doc body wrapper -->
 
-            <div id="post-<?php the_ID(); ?>" <?php post_class( 'col-padded' ); ?>><!-- inner custom column -->
+            <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>><!-- inner custom column -->
 
         <?php
         // main loop start

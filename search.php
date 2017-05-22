@@ -12,7 +12,7 @@ get_header();
 	<div class="row gutter"><!-- row -->
 
 		<div class="col-lg-12 col-md-12">
-			<div class="col-padded">
+			<div>
 				<h1 class="title-widget">
 					<?php echo __( 'Search results for:', 'kazaz' ) . ' <em>' . esc_attr( $_GET[ 's' ] ) . '</em>'; ?>
 				</h1>

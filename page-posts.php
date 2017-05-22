@@ -20,7 +20,7 @@ if( $sidebar_pos == 'left' ) $sidebar_class = ' col-lg-push-4 col-md-push-4';
 
     <div class="col-lg-8 col-md-8<?php echo $sidebar_class; ?>"><!-- doc body wrapper -->
     
-      <div class="col-padded"><!-- inner custom column -->
+      <div><!-- inner custom column -->
 
         <?php
         // main loop start

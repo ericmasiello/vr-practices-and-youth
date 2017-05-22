@@ -5,7 +5,7 @@
 ?>
 
 <?php get_header(); ?>
-<div id="post-<?php the_ID(); ?>" <?php post_class( 'col-padded' ); ?>><!-- inner custom column -->
+<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>><!-- inner custom column -->
   <?php while( have_posts() ) : the_post(); ?>
     <article>
       <?php include('inc/featured_image_bkg.php') ?>

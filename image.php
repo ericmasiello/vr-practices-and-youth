@@ -13,7 +13,7 @@ get_header();
     
     <div class="col-lg-12 col-md-12"><!-- doc body wrapper -->
         
-        <div class="col-padded"><!-- inner custom column -->
+        <div><!-- inner custom column -->
         
             <figure class="featured-image">
                 <?php k_attached_image(); ?>
