@@ -4,84 +4,28 @@
  */
 ?>
 
-<?php
-// print site header
-get_header();
-?>
+<?php get_header(); ?>
 
-<?php
-// sidebar
-$sidebar_class = '';
-$sidebar_pos = vp_option( 'vpt_option.sidebar_position' );
-if( $sidebar_pos == 'left' ) $sidebar_class = ' col-lg-push-4 col-md-push-4';
-?>
+<section>
+  <h1 class="page-title"><?php single_cat_title(); ?></h1>
+  <?php if( category_description() ) : ?>
+    <div class="category-description">
+      <?php echo category_description(); ?>
+    </div>
+  <?php endif; ?>
 
-  <div class="row no-gutter"><!-- row -->
+  <?php if(have_posts()): ?>
+    <?php while( have_posts() ) : the_post();
+      // include template for different post formats correspondingly
+      get_template_part('content', get_post_format());
+    endwhile; ?>
 
-    <div class="col-lg-8 col-md-8<?php echo $sidebar_class; ?>"><!-- doc body wrapper -->
-    
-      <div><!-- inner custom column -->
-      
-              <div class="row gutter"><!-- row -->
-                
-                  <div class="col-lg-12 col-md-12">
-            
-                      <h1 class="page-title"><?php single_cat_title(); ?></h1><!-- category title -->
-                    
-                        <?php if( category_description() ) : ?>
-                          <div class="category-description"><!-- category description -->
-                              <?php echo category_description(); ?>
-                          </div>
-                        <?php endif; ?>
-                    
-                    </div>
-                
-                </div><!-- row end -->
-        
-        <?php if( have_posts() ) : ?>
-          
-          <div class="row gutter k-equal-height"><!-- row -->
-          
-          <?php
-          // main loop start
-          while( have_posts() ) : the_post();
-            // include template for different post formats correspondingly
-            get_template_part( 'content', get_post_format() );
-          endwhile;
-          ?>
-          
-          </div><!-- row end -->
-          
-        <?php k_pagination(); // pagination ?>
-            
-        <?php else : ?>
-        
-          <div class="row gutter"><!-- row -->
-        
-          <?php get_template_part( 'content', 'none' ); ?>
-        
-          </div><!-- row end -->
+    <?php k_pagination(); // pagination ?>
+  <?php else: ?>
+    <div>
+      <?php get_template_part('content', 'none'); ?>
+    </div><!-- ./row -->
+  <?php endif; ?>
+</section>
 
-        <?php endif; ?>
-        
-      </div><!-- inner custom column end -->
-      
-    </div><!-- doc body wrapper end -->
-      
-    <?php
-    // print sidebar wrappers - open
-    k_sidebar_head();
-    
-    // print sidebar content
-    get_template_part( 'sidebars/sidebar-category' );
-    
-    // print sidebar wrappers - close
-    k_sidebar_foot();
-    ?>
-    
-  </div><!-- row end -->
-
-<?php
-// print site footer
-get_footer();
-?>
+<?php get_footer(); ?>

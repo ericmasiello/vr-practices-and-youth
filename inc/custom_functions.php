@@ -195,7 +195,7 @@ if( !function_exists( 'k_pagination' ) ) {
 		$output = '';
 		$format_prefix = '%2$s';
 		$p_date = sprintf( 
-			'<span class="news-meta-date"><a href="%1$s" title="%2$s" rel="bookmark"><time datetime="%3$s">%4$s</time></a></span>', 
+			'<span class="news-meta-date"><time datetime="%3$s">%4$s</time></span>', 
 			esc_url( get_permalink() ), 
 			esc_attr( sprintf( __( 'Permalink to %s', 'kazaz' ), the_title_attribute( 'echo=0' ) ) ), 
 			esc_attr( get_the_date( 'c' ) ), 
@@ -213,26 +213,11 @@ if( !function_exists( 'k_pagination' ) ) {
 		if( $echo ) {
 			echo '<div class="news-meta">';
 			echo $p_date . $all_cats;
-			echo '<span class="news-meta-comments">';
-			comments_popup_link( __( '0 comments', 'kazaz' ), __( '1 comment', 'kazaz' ), __( '% comments', 'kazaz' ) );
-			echo '</span>';
 			echo '</div>';
 		} else {
 			$write_comments = '';
 			$output .= '<div class="news-meta">';
 			$output .= $p_date . $all_cats;
-			$output .= '<span class="news-meta-comments">';
-			$num_comments = get_comments_number();
-			if( comments_open() ) {
-				if( $num_comments == 0 ) $comments = __( '0 comments', 'kazaz' );
-				elseif( $num_comments > 1 ) $comments = $num_comments . ' ' . __( 'comments', 'kazaz' );
-				else $comments = __( '1 comment', 'kazaz' );
-				$write_comments = '<a href="' . get_comments_link() .'" title="' . the_title_attribute( 'echo=0' ) . '">' . $comments . '</a>';
-			} else {
-				$write_comments =  __( 'Comments disabled.', 'kazaz' );
-			}
-			$output .= $write_comments;
-			$output .= '</span>';
 			$output .= '</div>';
 			return $output;
 		}
