@@ -571,6 +571,50 @@ img.alignleft, img.aligncenter, img.alignright {
   margin-top: 2.5rem;
 }
 
+.footer-contact-form form {
+  flex-wrap: wrap;
+}
+
+.footer-contact-form .wpcf7-form-control-wrap {
+  display: block;
+}
+
+.footer-contact-form .wpcf7-response-output {
+  margin: 1rem 0 0;
+}
+
+@media(min-width: 57.5rem) {
+  .footer-contact-form .wpcf7-response-output {
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+}
+
+.footer-contact-form .div.wpcf7-mail-sent-ok,
+.footer-contact-form .wpcf7-validation-errors {
+  order: -1;
+  width: 100%;
+  border: none;
+  border-radius: 3px;
+  padding: 1.25rem;
+}
+
+.footer-contact-form .div.wpcf7-mail-sent-ok {
+  background-color: #398f14;
+}
+
+.footer-contact-form .wpcf7-validation-errors {
+  background-color: #d45a3e;
+}
+
+.footer-contact-form .wpcf7-not-valid-tip {
+  color: #fff;
+  background: #d45a3e;
+  padding: 0.125rem 0.375rem;
+  border-radius: 0 0 0.1875rem 0.1875rem;
+  border: 1px solid #025380;
+}
+
 @media(min-width: 57.5rem) {
   .footer-contact-form__header,
   .footer-contact-form form {
@@ -608,6 +652,10 @@ img.alignleft, img.aligncenter, img.alignright {
 
 .footer-contact-form .form-item {
   margin-bottom: 1.5rem;
+}
+
+.footer-contact-form .form-item > br {
+  display: none;
 }
 
 .footer-contact-form .form-item:last-child {
