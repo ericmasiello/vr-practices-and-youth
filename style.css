@@ -840,3 +840,35 @@ img.alignleft, img.aligncenter, img.alignright {
 .home .content p {
   font-size: 1.25rem;
 }
+
+/*
+ * Project Staff
+ */
+
+ .page-project-staff .content img {
+   display: block;
+   width: auto;
+   height: auto;
+   max-width: 7.5rem;
+   max-height: 4rem;
+   margin: 0 0 2rem;
+ }
+
+ @media(min-width: 768px) {
+   .page-project-staff .content img {
+     margin-left: 2.5rem;
+     margin-right: auto;
+   }
+ }
+
+ .page-project-staff .content .row {
+   margin-bottom: 2rem;
+ }
+
+ .page-project-staff .content .row:last-child {
+   margin-bottom: 0;
+ }
+
+ .page-project-staff [class*="col-"] h2 {
+   margin-top: 0;
+ }
