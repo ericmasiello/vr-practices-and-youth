@@ -654,7 +654,7 @@ img.alignleft, img.aligncenter, img.alignright {
   margin-bottom: 1.5rem;
 }
 
-.footer-contact-form .form-item > br {
+.footer-contact-form .form-item br {
   display: none;
 }
 
