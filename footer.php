@@ -3,66 +3,42 @@
  * Theme Footer
  */
 ?>
+    </div><!-- /.page-container -->
+</div><!-- /[role=main] -->
 
-        </div><!-- container end -->
-
-    </div><!-- content wrapper end -->
-
-    <footer id="k-subfooter" class="site-footer  text-center  container"><!-- subfooter -->
+<footer>
+    <div class="page-container">
         <?php if (is_front_page()) : ?>
-            <?php if( !function_exists( 'dynamic_sidebar' ) || !dynamic_sidebar( __( 'Home Page Footer', 'kazaz' ) ) ) : ?>
-                <!-- footer widgets -->
-            <?php endif; ?>
+            <?php if( !function_exists( 'dynamic_sidebar' ) || !dynamic_sidebar( __( 'Home Page Footer', 'kazaz' ) ) ) : ?><?php endif; ?>
         <?php endif; ?>
-        <?php if( vp_option( 'vpt_option.contact_form_id' ) ) : ?>
-            <div id="contactus">
-                <?php echo do_shortcode( '[contact-form-7 id="' . vp_option( 'vpt_option.contact_form_id' ) . '" title="Contact form"]' ); ?>            
-            </div>
-        <?php endif; ?>
+        <?php include_once('inc/footer_contact_form.php'); ?>
 
-        <ul class="footer-widgets">
+        <div class="footer-widgets">
             <?php if( !function_exists( 'dynamic_sidebar' ) || !dynamic_sidebar( __( 'Footer Widget', 'kazaz' ) ) ) : ?>
             <!-- footer widgets -->
             <?php endif; ?>
-        </ul>
+        </div>
+    </div>
+    
+    <div role="contentinfo" class="page-container">
+        <?php if( vp_option( 'vpt_option.footer_logo' ) ) : ?>
+            <img
+                src="<?php echo vp_option( 'vpt_option.footer_logo' ); ?>"
+                alt="<?php echo vp_option( 'vpt_option.footer_logo_text' ); ?>"
+                class="footer-logo"
+            />
+        <?php endif; ?>
 
-        <div class="container" role="contentinfo"><!-- container -->
+        <?php if( vp_option( 'vpt_option.footer_message' ) ) : ?>
+            <div class="footer-message">
+                <?php echo vp_option( 'vpt_option.footer_message' ); ?>
+            </div>
+        <?php endif; ?>
+    </div>
+</footer>
 
-            <div class="row"><!-- row -->
-
-                <div class="col-xs-12">
-
-                    <div class="col-padded">
-
-                        
-
-                        <?php if( vp_option( 'vpt_option.footer_logo' ) ) : ?>
-                            <p>
-                                <img src="<?php echo vp_option( 'vpt_option.footer_logo' ); ?>" alt="<?php echo vp_option( 'vpt_option.footer_logo_text' ); ?>" class="footer-logo" />
-                            </p>
-                        <?php endif; ?>
-
-                        <?php if( vp_option( 'vpt_option.footer_message' ) ) : ?>
-                            <small><?php echo vp_option( 'vpt_option.footer_message' ); ?></small>
-                        <?php endif; ?>
-
-                    </div>
-
-
-                </div>
-
-            </div><!-- row end -->
-
-        </div><!-- container end -->
-
-    </footer><!-- subfooter end -->
-
-    <?php wp_footer(); ?>
-
-    <!-- Begin Analytics -->
-    <?php k_google_analytics(); ?>
-    <!-- End Analytics -->
-
-  </body>
-
+<?php wp_footer(); ?>
+<!-- Analytics -->
+<?php k_google_analytics(); ?>
+</body>
 </html>

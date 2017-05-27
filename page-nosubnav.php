@@ -13,7 +13,7 @@ get_header();
 
         <div class="col-lg-12 col-md-12"><!-- doc body wrapper -->
 
-            <div id="post-<?php the_ID(); ?>" <?php post_class( 'col-padded' ); ?>><!-- inner custom column -->
+            <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>><!-- inner custom column -->
 
         <?php
         // main loop start
@@ -22,7 +22,7 @@ get_header();
 
         <?php if( has_post_thumbnail() ) { ?>
 
-                    <figure class="news-featured-image">
+                    <figure class="featured-image">
                         <?php the_post_thumbnail(); ?>
                     </figure>
 
@@ -31,7 +31,7 @@ get_header();
         <h1 class="page-title"><?php the_title(); ?></h1>
 
 
-        <div class="news-body  clearfix">
+        <div class="content  clearfix">
           <?php the_content(); ?>
         </div>
 

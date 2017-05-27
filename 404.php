@@ -13,11 +13,11 @@ get_header();
         
         <div class="col-lg-12"><!-- doc body wrapper -->
             
-            <div class="col-padded"><!-- inner custom column -->
+            <div><!-- inner custom column -->
                 
                 <h1 class="page-title text-center"><?php _e( '404 Error', 'kazaz' ); ?></h1>
                 
-                <div class="news-body">
+                <div class="content">
                     
                     <div class="row"><!-- row -->
                     
