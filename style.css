@@ -29,6 +29,7 @@ html {
 body {
   margin: 0;
   padding-top: 3.75rem;
+  padding-bottom: 3.75rem;
 }
 
 body,
@@ -104,7 +105,8 @@ hr {
 }
 
 h1, .h1,
-h2, .h2 {
+h2, .h2,
+.rpwe-title {
   font-family: 'Fjalla One', sans-serif;
   font-weight: 200;
 }
@@ -288,6 +290,10 @@ img.alignleft, img.aligncenter, img.alignright {
 
 .featured a {
   color: #AD0737;
+}
+
+.featured a:hover {
+  color: #C7315C;
 }
 
 .iconimage {
@@ -482,6 +488,11 @@ img.alignleft, img.aligncenter, img.alignright {
   background-color: #AD0737;
   border-radius: 3px;
   color: #fff;
+  transition: background-color .5s;
+}
+
+.dropdown-menu > li:last-child a:hover {
+  background-color: #C7315C;
 }
 
 .dropdown-menu > li > a {
@@ -882,8 +893,8 @@ img.alignleft, img.aligncenter, img.alignright {
   display: block;
   width: auto;
   height: auto;
-  max-width: 7.5rem;
-  max-height: 4rem;
+  max-width: 12rem;
+  max-height: 6rem;
   margin: 0 0 2rem;
 }
 
