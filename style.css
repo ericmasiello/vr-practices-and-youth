@@ -257,6 +257,7 @@ img.alignleft, img.aligncenter, img.alignright {
 .hero {
   height: 12rem;
   background-image: url('public/img/hero-default.png');
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -542,6 +543,7 @@ img.alignleft, img.aligncenter, img.alignright {
   padding-right: 1.25rem;
 }
 
+.menu-primary-menu-container .sub-menu-item a,
 .dropdown-menu .sub-menu-item a {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 0.875rem;
