@@ -22,7 +22,7 @@
 
 <body <?php body_class(); ?>>
 
-    <a id="skip-navigation" href="#k-body">Skip Navigation</a>
+    <a id="skip-navigation" href="#primary-content">Skip Navigation</a>
 
     <!-- device test, don't remove. javascript needed! -->
     <span class="visible-xs"></span>
@@ -68,6 +68,6 @@
         </div>
     </header>
     
-    <div role="main"><!-- content wrapper -->
+    <div role="main" id="primary-content"><!-- content wrapper -->
         <div class="page-container"><!-- page-container -->
         
