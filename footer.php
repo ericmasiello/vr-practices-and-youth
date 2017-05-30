@@ -21,6 +21,34 @@
     </div>
     
     <div role="contentinfo" class="page-container">
+        <div class="footer-logos">
+            <?php
+            $logo_iterator = 0;
+            while($logo_iterator <= 5) {
+                if( vp_option( 'vpt_option.footer_logo_link_' . $logo_iterator ) ) :?>
+                    <a
+                        href="<?php echo vp_option( 'vpt_option.footer_logo_link_' . $logo_iterator ); ?>"
+                        target="_blank"
+                        class="footer-logo-link"
+                    >
+                <?php
+                endif;
+                if( vp_option( 'vpt_option.footer_logo_' . $logo_iterator ) ) :?>
+                    <img
+                        src="<?php echo vp_option( 'vpt_option.footer_logo_'  . $logo_iterator ); ?>"
+                        alt="<?php echo vp_option( 'vpt_option.footer_logo_text_'  . $logo_iterator ); ?>"
+                        class="footer-logo"
+                    />
+                <?php endif;
+                if( vp_option( 'vpt_option.footer_logo_link_' . $logo_iterator ) ) :?>
+                    </a>
+                <?php
+                endif;
+                $logo_iterator++;
+            }
+            ?>
+        </div>
+
         <?php if( vp_option( 'vpt_option.footer_logo' ) ) : ?>
             <img
                 src="<?php echo vp_option( 'vpt_option.footer_logo' ); ?>"

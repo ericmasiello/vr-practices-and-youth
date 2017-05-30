@@ -793,6 +793,35 @@ img.alignleft, img.aligncenter, img.alignright {
 }
 
 /*
+ * Footer Logos
+ */
+
+@media (min-width: 48rem) {
+  .footer-logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.footer-logo-link {
+  display: block;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+@media (min-width: 48rem) {
+  .footer-logo-link {
+    margin: 0 1rem;
+  }
+}
+
+.footer-logo {
+  max-height: 4.25rem;
+  max-width: 10rem;
+}
+
+/*
  * Footer Message
  */
 

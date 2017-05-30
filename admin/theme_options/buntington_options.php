@@ -9,7 +9,7 @@ return array(
             'title' => __('Contact', 'kazaz'),
             'name' => 'contact_options',
             'icon' => 'font-awesome:fa fa-envelope',
-            'controls' => array(				
+            'controls' => array(
                 /* personal contact starts */
                 array(
                     'type' => 'section',
@@ -117,51 +117,139 @@ return array(
                     ),
                 ),				
                 /* error page image starts */
-                array(
-                    'type' => 'section',
-                    'title' => __('Call to Action', 'kazaz'),
-                    'name' => 'call_to_action',
-                    'description' => __('Upload photo that will be shown whenever page not found.', 'kazaz'),
-                    'fields' => array(
-                        array(
-                            'type' => 'upload',
-                            'name' => 'call_to_action_image',
-                            'label' => __('Upload Call to Action image', 'kazaz'),
-                            'description' => __('This is the image that will appear beside your featured image in the page template "Call to Action".', 'kazaz'),
-                        ),
-                        array(
-                            'type' => 'textbox',
-                            'name' => 'call_to_action_text',
-                            'label' => __('Alt text used with image', 'kazaz'),
-                            'default' => __('Join Us', 'kazaz'),
-                        ),
-                        array(
-                            'type' => 'textbox',
-                            'name' => 'call_to_action_url',
-                            'label' => __('Call to action URL', 'kazaz'),
-                            'default' => __('http://', 'kazaz'),
-                        )
-                    ),
-                ),
 
                 array(
                     'type' => 'section',
-                    'title' => __('Footer Logo/Image', 'kazaz'),
+                    'title' => __('Footer Logo/Image 1', 'kazaz'),
                     'name' => 'footer_logos',
                     'description' => __('Upload the image you would like to appear in the footer.', 'kazaz'),
                     'fields' => array(
                         array(
                             'type' => 'upload',
-                            'name' => 'footer_logo',
+                            'name' => 'footer_logo_0',
                             'label' => __('Footer Logo', 'kazaz'),
                             'description' => __('This image will appear in the footer.', 'kazaz'),
                         ),
                         array(
                             'type' => 'textbox',
-                            'name' => 'footer_logo_text',
+                            'name' => 'footer_logo_link_0',
+                            'label' => __('Hyperlink', 'kazaz'),
+                            'default' => __('', 'kazaz'),
+                        ),
+                        array(
+                            'type' => 'textbox',
+                            'name' => 'footer_logo_text_0',
                             'label' => __('Alt text used with image', 'kazaz'),
                             'default' => __('', 'kazaz'),
-                        )
+                        ),
+                    )
+                ),
+
+                array(
+                    'type' => 'section',
+                    'title' => __('Footer Logo/Image 2', 'kazaz'),
+                    'name' => 'footer_logos',
+                    'description' => __('Upload the image you would like to appear in the footer.', 'kazaz'),
+                    'fields' => array(
+                        array(
+                            'type' => 'upload',
+                            'name' => 'footer_logo_1',
+                            'label' => __('Footer Logo', 'kazaz'),
+                            'description' => __('This image will appear in the footer.', 'kazaz'),
+                        ),
+                        array(
+                            'type' => 'textbox',
+                            'name' => 'footer_logo_link_1',
+                            'label' => __('Hyperlink', 'kazaz'),
+                            'default' => __('', 'kazaz'),
+                        ),
+                        array(
+                            'type' => 'textbox',
+                            'name' => 'footer_logo_text_1',
+                            'label' => __('Alt text used with image', 'kazaz'),
+                            'default' => __('', 'kazaz'),
+                        ),
+                    )
+                ),
+
+                array(
+                    'type' => 'section',
+                    'title' => __('Footer Logo/Image 3', 'kazaz'),
+                    'name' => 'footer_logos',
+                    'description' => __('Upload the image you would like to appear in the footer.', 'kazaz'),
+                    'fields' => array(
+                        array(
+                            'type' => 'upload',
+                            'name' => 'footer_logo_2',
+                            'label' => __('Footer Logo', 'kazaz'),
+                            'description' => __('This image will appear in the footer.', 'kazaz'),
+                        ),
+                        array(
+                            'type' => 'textbox',
+                            'name' => 'footer_logo_link_2',
+                            'label' => __('Hyperlink', 'kazaz'),
+                            'default' => __('', 'kazaz'),
+                        ),
+                        array(
+                            'type' => 'textbox',
+                            'name' => 'footer_logo_text_2',
+                            'label' => __('Alt text used with image', 'kazaz'),
+                            'default' => __('', 'kazaz'),
+                        ),
+                    )
+                ),
+
+                array(
+                    'type' => 'section',
+                    'title' => __('Footer Logo/Image 4', 'kazaz'),
+                    'name' => 'footer_logos',
+                    'description' => __('Upload the image you would like to appear in the footer.', 'kazaz'),
+                    'fields' => array(
+                        array(
+                            'type' => 'upload',
+                            'name' => 'footer_logo_3',
+                            'label' => __('Footer Logo', 'kazaz'),
+                            'description' => __('This image will appear in the footer.', 'kazaz'),
+                        ),
+                        array(
+                            'type' => 'textbox',
+                            'name' => 'footer_logo_link_3',
+                            'label' => __('Hyperlink', 'kazaz'),
+                            'default' => __('', 'kazaz'),
+                        ),
+                        array(
+                            'type' => 'textbox',
+                            'name' => 'footer_logo_text_3',
+                            'label' => __('Alt text used with image', 'kazaz'),
+                            'default' => __('', 'kazaz'),
+                        ),
+                    )
+                ),
+
+                array(
+                    'type' => 'section',
+                    'title' => __('Footer Logo/Image 5', 'kazaz'),
+                    'name' => 'footer_logos',
+                    'description' => __('Upload the image you would like to appear in the footer.', 'kazaz'),
+                    'fields' => array(
+                        array(
+                            'type' => 'upload',
+                            'name' => 'footer_logo_4',
+                            'label' => __('Footer Logo', 'kazaz'),
+                            'description' => __('This image will appear in the footer.', 'kazaz'),
+                        ),
+                        array(
+                            'type' => 'textbox',
+                            'name' => 'footer_logo_link_4',
+                            'label' => __('Hyperlink', 'kazaz'),
+                            'default' => __('', 'kazaz'),
+                        ),
+                        array(
+                            'type' => 'textbox',
+                            'name' => 'footer_logo_text_4',
+                            'label' => __('Alt text used with image', 'kazaz'),
+                            'default' => __('', 'kazaz'),
+                        ),
                     )
                 ),
 
@@ -224,7 +312,7 @@ return array(
             'title' => __('Code', 'kazaz'),
             'name' => 'javascript_codes',
             'icon' => 'font-awesome:fa fa-code',
-            'controls' => array(				
+            'controls' => array(
                 // google analytics
                 array(
                     'type' => 'section',
