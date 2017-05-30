@@ -64,6 +64,14 @@ input[type="reset"] {
   color: #AD0737;
   font-size: 1.125rem;
   cursor: pointer;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+button:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover {
+  background-color: #C7315C;
 }
 
 p {
@@ -298,6 +306,8 @@ img.alignleft, img.aligncenter, img.alignright {
 }
 
 .iconimage {
+  display: block;
+  margin: auto;
   fill: currentColor;
   max-width: 4rem;
   max-height: 4rem;
@@ -561,6 +571,11 @@ img.alignleft, img.aligncenter, img.alignright {
  * Homepage Latest News
  */
 
+.rpwe-summary {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
 .rpwe-ul {
   margin: 0;
   padding: 0;
@@ -715,6 +730,10 @@ img.alignleft, img.aligncenter, img.alignright {
   width: 100%;
 }
 
+.footer-contact-form [type="submit"]:hover {
+  color: #fff;
+}
+
 @media(min-width: 57.5rem) {
   .footer-contact-form [type=submit] {
     width: auto;
@@ -767,11 +786,6 @@ img.alignleft, img.aligncenter, img.alignright {
   border-radius: 0 3px 3px 0;
   background-color: #AD0737;
   color: #fff;
-  transition: background-color 0.5s;
-}
-
-.widget_sf_widget_constantcontact [type="submit"]:hover {
-  background-color: #C7315C;
 }
 
 [role="contentinfo"] {
