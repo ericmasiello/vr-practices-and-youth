@@ -359,6 +359,7 @@ img.alignleft, img.aligncenter, img.alignright {
 /*
  * Hamburger
  */
+
 #mobile-nav-switch {
   display: block;
   position: absolute;
@@ -438,6 +439,7 @@ img.alignleft, img.aligncenter, img.alignright {
 /*
  * Primary Mobile Navigation 
  */
+
 .mobile-nav {
   display: none;
   margin-top: 0.5rem;
@@ -565,6 +567,41 @@ img.alignleft, img.aligncenter, img.alignright {
 .dropdown-menu .sub-menu-item + li:not(.sub-menu-item) {
   border-top: 1px solid #fff;
   margin-top: -1px;
+}
+
+/*
+ * Custom Drop down (select)
+ */
+
+.nature-of-question {
+  border: 1px grey solid;
+  background-color: #fff;
+  display: inline-block;
+  position: relative;
+}
+
+.nature-of-question::after {
+  position: absolute;
+  content: '';
+  background-image: url('public/img/dropdown-arrow.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 0.75rem;
+  height: 0.75rem;
+  z-index: 1;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.nature-of-question > select {
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: transparent;
+  border: none;
+  padding: 0.5rem;
+  z-index: 2;
 }
 
 /*
