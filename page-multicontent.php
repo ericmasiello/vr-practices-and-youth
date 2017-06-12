@@ -4,89 +4,42 @@
  */
 ?>
 
-<?php
-// print site header
-get_header();
-?>
+<?php get_header(); ?>
+<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>><!-- inner custom column -->
+    <?php while( have_posts() ) : the_post(); ?>
+        <?php include('inc/featured_image_bkg.php') ?>
 
-    <div class="row no-gutter fullwidth"><!-- row -->
+        <?php if( get_field('display_page_title') == true ) { ?>
+            <h1 class="page-title"><?php the_title(); ?></h1>
+        <?php } else { ?>
+            <h1 class="page-title  sr-only"><?php the_title(); ?></h1>
+        <?php } ?>
 
-        <div class="col-lg-12 col-md-12"><!-- doc body wrapper -->
+        <div class="content center">
+            <?php the_content(); ?>
+        </div>
 
-            <div id="post-<?php the_ID(); ?>" <?php post_class( 'col-padded' ); ?>><!-- inner custom column -->
+        <hr />
 
-				<?php
-				// main loop start
-				while( have_posts() ) : the_post();
-				?>
-
-				<?php if( has_post_thumbnail() ) { ?>
-
-                    <figure class="news-featured-image">
-                        <?php the_post_thumbnail(); ?>
-                    </figure>
-
-				<?php } ?>
-
-				<?php if( get_field('display_page_title') == true ) { ?>
-					<h1 class="page-title"><?php the_title(); ?></h1>
-				<?php } else { ?>
-					<h1 class="page-title  sr-only"><?php the_title(); ?></h1>
-				<?php } ?>
-
-				<?php include("inc/subnav.php"); ?>
-
-
-				<div class="news-body  clearfix">
-					<?php the_content(); ?>
-				</div>
-
-				<div class="row  equal-height">
-
-					<div class="col-md-4  prm-md">
-						<div class="well">
-							<?php if(get_field('research')){ //if the field is not empty
-								echo get_field('research'); //display it
-							} ?>
-						</div>
-					</div>
-
-					<div class="col-md-4  phm-md">
-						<div class="well">
-							<?php if(get_field('resources')){ //if the field is not empty
-								echo get_field('resources'); //display it
-							} ?>
-						</div>
-					</div>
-
-					<div class="col-md-4  phm-md">
-						<div class="well">
-							<?php if(get_field('training_&_ta')){ //if the field is not empty
-								echo get_field('training_&_ta'); //display it
-							} ?>
-						</div>
-					</div>
-
-				</div>
-
-				<?php
-				// paging
-				k_paging();
-
-				// allow page comments?
-				// komments...
-
-				// main loop end
-				endwhile;
-				?>
-
-			</div><!-- inner custom column end -->
-
-		</div><!-- doc body wrapper end -->
-		
-	</div><!-- row end -->
-
-<?php
-// print site footer
-get_footer();
-?>
+        <section class="featured">
+            <div>
+                <?php if(get_field('column-one')) {
+                    echo get_field('column-one');
+                } ?>
+            </div>
+            <div>
+                <?php if(get_field('resources')) {
+                    echo get_field('resources');
+                } ?>
+            </div>
+            <div>
+                <?php if(get_field('training_&_ta')) {
+                    echo get_field('training_&_ta');
+                } ?>
+            </div>
+        </section>
+        <?php k_paging(); ?>
+        <hr />
+    <?php endwhile; ?>
+</div><!-- inner custom column end -->
+<?php get_footer(); ?>

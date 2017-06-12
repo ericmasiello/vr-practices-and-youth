@@ -14,11 +14,11 @@ body { font-family: '<?php echo $font_face_content; ?>', 'Myriad Pro', 'Helvetic
 h1, h2, h3, h4, h5, h6 { font-family: '<?php echo $font_face_title; ?>', 'Myriad Pro', 'Helvetica',  sans-serif; }
 <?php 
 } else { 
-	if( !empty( $font_face_content ) ) {
+    if( !empty( $font_face_content ) ) {
 ?>
 h1, h2, h3, h4, h5, h6 { font-family: '<?php echo $font_face_content; ?>', 'Myriad Pro', 'Helvetica',  sans-serif; }
 <?php 
-	}
+    }
 }
 // end typography
 ?>
@@ -89,7 +89,7 @@ $image_bg_size = vp_option( 'vpt_option.image_bg_size' );
 if( $use_background_image ) {
 ?>
 #k-footer { 
-	color: <?php echo $footer_text_color; ?>;
+    color: <?php echo $footer_text_color; ?>;
     background-color: <?php echo $footer_bg_color; ?>;
     background-image: url(<?php echo $image_bg_url; ?>);
     background-repeat: <?php echo $image_bg_repeat; ?>;
