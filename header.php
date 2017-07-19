@@ -16,7 +16,6 @@
     <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-    <script src="<?php echo get_bloginfo('template_directory'); ?>/custom/modernizr.custom.js"></script>
     <?php wp_head(); ?>	
 </head>
 
