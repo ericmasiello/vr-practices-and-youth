@@ -28,13 +28,13 @@
                 } ?>
             </div>
             <div>
-                <?php if(get_field('resources')) {
-                    echo get_field('resources');
+                <?php if(get_field('column-two')) {
+                    echo get_field('column-two');
                 } ?>
             </div>
             <div>
-                <?php if(get_field('training_&_ta')) {
-                    echo get_field('training_&_ta');
+                <?php if(get_field('column-three')) {
+                    echo get_field('column-three');
                 } ?>
             </div>
         </section>
