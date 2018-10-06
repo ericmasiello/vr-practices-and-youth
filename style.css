@@ -569,6 +569,13 @@ img.alignleft, img.aligncenter, img.alignright {
   margin-top: -1px;
 }
 
+/* Override dropdown menu for Training and About Us */
+#menu-item-995 > ul,
+#menu-item-703 > ul {
+  width: auto;
+  min-width: 12rem;
+}
+
 /*
  * Custom Drop down (select)
  */
