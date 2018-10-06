@@ -1046,3 +1046,19 @@ img.alignleft, img.aligncenter, img.alignright {
 .category-news.post .hero {
   margin-bottom: 2rem;
 }
+
+/*
+ * Seminars
+ */
+
+ .page-seminars [class*="col-"] h3 {
+   margin-top: 0;
+ }
+
+ /*
+  * Webinars
+  */
+
+.page-webinars [class*="col-"] h3 {
+  margin-top: 0;
+}
